@@ -29,4 +29,4 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
 ## Unresolved
 
-Datos de contacto (placeholders en site.config.js), permiso del socio del techado, reemplazo de las imágenes ilustrativas por la primera cancha real.
+Datos de contacto (placeholders en site.config.js), reemplazo de las imágenes ilustrativas por la primera cancha real.

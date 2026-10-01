@@ -261,7 +261,7 @@ function main() {
     provenance: 'Video real de fabricacion: amolado de un pano de malla terminado, con chispas. Recorte y compresion, sin retoque.',
   });
 
-  const techadoProvenance = 'Foto real de obra de techado de un socio de estructuras. Recorte y compresion.';
+  const techadoProvenance = 'Foto real de obra de techado. Recorte y compresion.';
   makePhotoSet({
     slug: 'techado-exterior',
     srcPath: path.join(TECHADO_DIR, 'WhatsApp Image 2026-07-27 at 3.49.13 PM.jpeg'),
