@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.astro/
+.impeccable/review/
+assets-fuente/
+corner_crop*.png
+sign_crop.png

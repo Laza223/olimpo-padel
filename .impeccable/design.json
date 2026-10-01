@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-26T00:00:00Z",
+  "title": "Design System: Olimpo Padel",
+  "extensions": {
+    "colorMeta": {
+      "navy": {
+        "role": "primary",
+        "displayName": "Navy",
+        "canonical": "#0b2132",
+        "tonalRamp": ["#050d14", "#0b2132", "#0f2b41", "#173a57", "#2d4f6f", "#4a7196", "#8fa8bd", "#dbe3ea"]
+      },
+      "navy-2": {
+        "role": "primary",
+        "displayName": "Navy medio",
+        "canonical": "#0f2b41",
+        "tonalRamp": []
+      },
+      "navy-3": {
+        "role": "primary",
+        "displayName": "Navy claro",
+        "canonical": "#173a57",
+        "tonalRamp": []
+      },
+      "rojo": {
+        "role": "secondary",
+        "displayName": "Rojo Olimpo",
+        "canonical": "#d42f38",
+        "tonalRamp": ["#3d0e10", "#6d1117", "#a11e24", "#d42f38", "#e05a61", "#eb8489", "#f4b2b5", "#fbdadc"]
+      },
+      "rojo-2": {
+        "role": "secondary",
+        "displayName": "Rojo oscuro (hover)",
+        "canonical": "#b8242d",
+        "tonalRamp": []
+      },
+      "celeste": {
+        "role": "tertiary",
+        "displayName": "Celeste (sin uso confirmado en CSS)",
+        "canonical": "#4095b6",
+        "tonalRamp": []
+      },
+      "celeste-claro": {
+        "role": "tertiary",
+        "displayName": "Celeste claro",
+        "canonical": "#7cc0dc",
+        "tonalRamp": ["#0f3542", "#1c5266", "#2c7691", "#4095b6", "#7cc0dc", "#a9d7e8", "#cfe9f2", "#eef8fb"]
+      },
+      "azul": {
+        "role": "neutral",
+        "displayName": "Azul (link único)",
+        "canonical": "#1d5f8f",
+        "tonalRamp": []
+      },
+      "tinta": {
+        "role": "neutral",
+        "displayName": "Tinta (texto, mismo hex que Navy)",
+        "canonical": "#0b2132",
+        "tonalRamp": []
+      },
+      "tinta-2": {
+        "role": "neutral",
+        "displayName": "Tinta secundaria",
+        "canonical": "#4a5d6d",
+        "tonalRamp": []
+      },
+      "linea": {
+        "role": "neutral",
+        "displayName": "Línea",
+        "canonical": "#dbe3ea",
+        "tonalRamp": []
+      },
+      "fondo": {
+        "role": "neutral",
+        "displayName": "Fondo claro",
+        "canonical": "#f3f6f9",
+        "tonalRamp": []
+      },
+      "blanco": {
+        "role": "neutral",
+        "displayName": "Blanco",
+        "canonical": "#ffffff",
+        "tonalRamp": []
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "H1 del hero, único, en mayúscula." },
+      "headline": { "displayName": "Headline", "purpose": "H2 de cada sección (.titulo), siempre con barra roja debajo." },
+      "title": { "displayName": "Title", "purpose": "Nombre de producto y cifras grandes (stats, garantías)." },
+      "body": { "displayName": "Body", "purpose": "Párrafos y bajadas; bajada limitada a 58ch." },
+      "label": { "displayName": "Label", "purpose": "Navegación, botones y leyendas en mayúscula de los pasos." }
+    },
+    "shadows": [
+      { "name": "sombra", "value": "0 1px 2px rgb(11 33 50 / 0.06), 0 12px 32px -12px rgb(11 33 50 / 0.18)", "purpose": "Tarjetas en reposo: beneficios, garantías." },
+      { "name": "sombra-alta", "value": "0 2px 4px rgb(11 33 50 / 0.08), 0 28px 60px -20px rgb(11 33 50 / 0.35)", "purpose": "Piezas destacadas: foto del hero, ficha de la cancha, foto de los pasos." },
+      { "name": "boton-rojo", "value": "0 10px 24px -10px rgb(212 47 56 / 0.7)", "purpose": "Sombra del botón primario (WhatsApp)." },
+      { "name": "boton-wa-flotante", "value": "0 12px 28px -8px rgb(212 47 56 / 0.75)", "purpose": "Botón de WhatsApp flotante fijo." }
+    ],
+    "motion": [
+      { "name": "transicion-estado", "value": "0.2s", "purpose": "Duración estándar de hover/focus en botones, enlaces y el acordeón de FAQ." },
+      { "name": "aparece-scroll", "value": "animation-timeline: view(); animation-range: entry 0% entry 40%", "purpose": "Aparición progresiva de los pasos al hacer scroll, solo si el navegador soporta scroll-driven animations y prefers-reduced-motion no está activo; degrada a contenido siempre visible." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "600px" },
+      { "name": "md", "value": "700px" },
+      { "name": "lg", "value": "800px" },
+      { "name": "nav", "value": "900px" },
+      { "name": "xl", "value": "960px" },
+      { "name": "xxl", "value": "1040px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botón primario (WhatsApp)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "CTA principal, siempre con ícono de WhatsApp inline; abre wa.me con mensaje precargado.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\"><svg class=\"ds-ico-wa\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35zM12.05 21.79h-.01a9.86 9.86 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.44 4.43-9.86 9.87-9.86 2.64 0 5.11 1.03 6.97 2.89a9.82 9.82 0 0 1 2.88 6.97c0 5.44-4.43 9.86-9.86 9.86zm8.47-18.34A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L0 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41z\"/></svg>Quiero mi cancha</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; min-height: 52px; padding: 0.85rem 1.5rem; border-radius: 999px; border: 2px solid transparent; font-weight: 700; font-size: 1rem; text-decoration: none; background: #d42f38; color: #fff; box-shadow: 0 10px 24px -10px rgb(212 47 56 / 0.7); transition: background-color 0.2s, transform 0.2s; } .ds-btn-primary:hover { background: #b8242d; } .ds-btn-primary:active { transform: translateY(1px); } .ds-ico-wa { width: 1.25em; height: 1.25em; flex: none; }"
+    },
+    {
+      "name": "Botón navy",
+      "kind": "button",
+      "refersTo": "button-navy",
+      "description": "CTA secundario sobre fondo claro, cuando el rojo no debe competir con otro CTA cercano (ej. techado).",
+      "html": "<a class=\"ds-btn-navy\" href=\"#\">Consultá por cancha y techado</a>",
+      "css": ".ds-btn-navy { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0.85rem 1.5rem; border-radius: 999px; border: none; font-weight: 700; font-size: 1rem; text-decoration: none; background: #0b2132; color: #fff; transition: background-color 0.2s; } .ds-btn-navy:hover { background: #173a57; }"
+    },
+    {
+      "name": "Botón ghost",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "CTA secundario sobre el hero navy (ej. \"Ver la cancha\"); nunca sobre fondo claro.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">Ver la cancha</a>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0.85rem 1.5rem; border-radius: 999px; border: 2px solid rgb(255 255 255 / 0.35); font-weight: 700; font-size: 1rem; text-decoration: none; color: #fff; background: transparent; transition: border-color 0.2s, background-color 0.2s; } .ds-btn-ghost:hover { border-color: #fff; background: rgb(255 255 255 / 0.06); }"
+    },
+    {
+      "name": "Tarjeta de beneficio",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Ítem de la grilla \"llave en mano\": ícono navy circular, título y descripción.",
+      "html": "<article class=\"ds-card\"><span class=\"ds-card-ico\" aria-hidden=\"true\">★</span><h3>Un solo responsable</h3><p>Un único interlocutor para toda la obra y la garantía directa con quien fabricó e instaló tu cancha.</p></article>",
+      "css": ".ds-card { background: #fff; padding: clamp(1.75rem, 1.4rem + 1.2vw, 2.5rem); } .ds-card-ico { display: grid; place-items: center; width: 3.25rem; height: 3.25rem; border-radius: 12px; background: #0b2132; color: #fff; } .ds-card h3 { margin-top: 1.25rem; font-size: 1.25rem; font-weight: 800; } .ds-card p { margin-top: 0.6rem; color: #4a5d6d; }"
+    },
+    {
+      "name": "Acordeón de FAQ",
+      "kind": "custom",
+      "refersTo": "card",
+      "description": "Pregunta/respuesta nativa (details/summary); el signo + gira y pasa a rojo al abrirse.",
+      "html": "<details class=\"ds-faq\"><summary>¿Hasta dónde instalan?</summary><div class=\"ds-faq-a\">Respuesta de ejemplo.</div></details>",
+      "css": ".ds-faq { background: #fff; border: 1px solid #dbe3ea; border-radius: 14px; } .ds-faq summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.15rem 1.35rem; cursor: pointer; list-style: none; font-weight: 700; font-size: 1.0625rem; } .ds-faq summary::-webkit-details-marker { display: none; } .ds-faq summary::after { content: ''; flex: none; width: 1.75rem; height: 1.75rem; border-radius: 50%; background: linear-gradient(#fff, #fff) center / 11px 2px no-repeat, linear-gradient(#fff, #fff) center / 2px 11px no-repeat, #0b2132; transition: transform 0.25s, background-color 0.2s; } .ds-faq[open] summary::after { transform: rotate(45deg); background-color: #d42f38; } .ds-faq-a { padding: 0 1.35rem 1.25rem; color: #4a5d6d; }"
+    },
+    {
+      "name": "Etiqueta de imagen ilustrativa",
+      "kind": "custom",
+      "refersTo": "card",
+      "description": "Píldora sobre toda imagen/render de terceros; nunca sobre contenido real (ese lleva leyenda de texto simple en su lugar).",
+      "html": "<span class=\"ds-etiqueta\">Imagen ilustrativa</span>",
+      "css": ".ds-etiqueta { position: absolute; left: 0.75rem; bottom: 0.75rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.01em; color: #fff; background: rgb(11 33 50 / 0.72); backdrop-filter: blur(6px); padding: 0.25rem 0.6rem; border-radius: 999px; }"
+    },
+    {
+      "name": "Marca de dato pendiente",
+      "kind": "custom",
+      "refersTo": "card",
+      "description": "Reemplaza en el lugar exacto un dato de contacto que en site.config.js todavía dice COMPLETAR.",
+      "html": "<mark class=\"ds-pendiente\">Completar: WhatsApp</mark>",
+      "css": ".ds-pendiente { background: #fde8e9; color: #6d1117; border: 1px dashed #d98a90; border-radius: 6px; padding: 0.05rem 0.4rem; font-size: 0.875em; font-weight: 600; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "El folleto del fabricante",
+    "overview": "Olimpo vende una obra grande (~USD 20.000) a alguien que decide desde el celular, sin trayectoria de empresa ni obras propias que mostrar todavía. El sistema visual responde con el oficio clásico del rubro: navy de marca dominando fondos y secciones oscuras, blanco para respirar, y rojo reservado casi por completo a un solo gesto — empujar al botón de WhatsApp. No hay exploración de mundo nuevo acá: es la estructura de landing de conversión de siempre (hero, modelo, beneficios, pasos, fabricación, techado, garantía, FAQ, cierre), bien tipografiada y sin relleno. Todo el peso tipográfico corre por una sola familia variable, Archivo, usada en su eje de ancho (font-stretch) para lograr títulos condensados en mayúscula sin sumar una segunda fuente. El rojo nunca decora: aparece en el botón de WhatsApp, en la barra bajo cada título, en el número de cada paso, en la marca de cada ítem de lista y en la unidad de cada cifra. Fuera de esos usos puntuales, el color lo llevan el navy y sus dos tonos más claros.",
+    "keyCharacteristics": [
+      "Navy dominante en secciones oscuras (hero, pasos, fabricación, cierre, pie) alternado con blanco/gris azulado en secciones claras.",
+      "Rojo estrictamente de detalle: nunca fondo de sección, nunca cuerpo de texto.",
+      "Una sola familia (Archivo) llevando displays condensados en mayúscula y texto corrido sin condensar.",
+      "Tarjetas blancas redondeadas con sombra suave; nada de sombras duras ni bordes gruesos.",
+      "Toda imagen de terceros lleva la etiqueta \"Imagen ilustrativa\"; las fotos/videos reales llevan una leyenda de texto que dice \"reales\", nunca la píldora de etiqueta."
+    ],
+    "rules": [
+      { "name": "La Regla del Rojo Único", "body": "El rojo es el único color de acción del sistema: vive en el botón de WhatsApp, la barra bajo cada título, los números de paso, las marcas de lista y las unidades de las cifras. Nunca es fondo de sección ni color de texto corrido.", "section": "colors" },
+      { "name": "La Regla de la Familia Única", "body": "Todo el sitio usa Archivo. La jerarquía se construye variando peso y font-stretch, nunca sumando otra tipografía.", "section": "typography" },
+      { "name": "La Regla de la Sombra Difusa", "body": "Toda sombra usa tinte navy translúcido y desenfoque amplio, nunca un offset duro ni un color neutro.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do usar el rojo (#d42f38) solo en: botón de WhatsApp, barra bajo título, número de paso, marca de lista, unidad de cifra y el signo del FAQ abierto.",
+      "Do etiquetar toda imagen de terceros/render con la píldora \"Imagen ilustrativa\" (.etiqueta).",
+      "Do rotular el contenido real (fotos y videos del taller/obra) como \"reales\" en una leyenda de texto simple, nunca con la píldora de .etiqueta.",
+      "Do tomar todo dato de contacto (WhatsApp, Instagram, dominio, zona, cobertura) únicamente de site.config.js, mostrando <mark class=\"pendiente\"> mientras diga COMPLETAR.",
+      "Do mantener una sola familia tipográfica (Archivo) y construir jerarquía con peso y font-stretch."
+    ],
+    "donts": [
+      "Don't usar amarillo en ningún elemento del sistema.",
+      "Don't usar el rojo como fondo de sección o color de texto corrido.",
+      "Don't sumar una segunda familia tipográfica o un ícono que no sea SVG inline.",
+      "Don't aplicar sombras duras con offset marcado; toda sombra es difusa y con tinte navy.",
+      "Don't presentar un render de IA o foto de stock como obra terminada de Olimpo: siempre \"Imagen ilustrativa\"."
+    ]
+  }
+}

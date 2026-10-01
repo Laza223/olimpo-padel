@@ -1,0 +1,49 @@
+---
+import BotonWa from '../components/BotonWa.astro';
+import Foto from '../components/Foto.astro';
+import { MSG } from '../lib/site';
+
+const pasos = [
+  ['Contacto', 'Escribinos por WhatsApp y te asesoramos, sin compromiso.'],
+  ['Presupuesto', 'En 24 horas tenés una propuesta a medida, con cancha, logística e instalación por separado.'],
+  ['Fabricación', 'Fabricamos en taller la estructura y la malla de tu cancha.'],
+  ['Entrega', 'Llevamos todo hasta tu galpón o club.'],
+  ['Instalación', 'Nuestro equipo la arma y te la entrega lista para jugar.'],
+];
+---
+<section class="seccion oscuro" id="como-trabajamos" aria-labelledby="pasos-titulo">
+  <div class="contenedor pasos__grid">
+    <div>
+      <h2 class="titulo" id="pasos-titulo">Así de simple es tener tu cancha</h2>
+      <p class="bajada">De la primera charla al primer partido, en 30 a 45 días hábiles.</p>
+      <figure class="pasos__media">
+        <Foto
+          nombre="cancha-noche"
+          anchos={[640]}
+          alto={640}
+          sizes="(min-width: 960px) 40vw, 100vw"
+          alt="Cancha de pádel iluminada de noche"
+        />
+        <figcaption class="etiqueta">Imagen ilustrativa</figcaption>
+      </figure>
+    </div>
+
+    <div>
+      <ol class="pasos" role="list">
+        {
+          pasos.map(([titulo, texto]) => (
+            <li class="paso aparece">
+              <div>
+                <h3>{titulo}</h3>
+                <p>{texto}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+      <div class="pasos__cta">
+        <BotonWa texto={MSG.base} class="btn btn--rojo btn--grande">Empezá por el paso 1</BotonWa>
+      </div>
+    </div>
+  </div>
+</section>

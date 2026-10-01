@@ -1,0 +1,50 @@
+---
+import BotonWa from '../components/BotonWa.astro';
+import { MSG } from '../lib/site';
+---
+<section class="seccion claro" id="llave-en-mano" aria-labelledby="llave-titulo">
+  <div class="contenedor">
+    <h2 class="titulo titulo--centro" id="llave-titulo">El valor de elegir llave en mano</h2>
+    <p class="bajada bajada--centro">
+      Olvidate de coordinar herreros, vidrieros, electricistas y colocadores. Nos encargamos de todo, de principio a fin.
+    </p>
+
+    <div class="beneficios">
+      <article class="beneficio">
+        <span class="beneficio__ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z" />
+            <path d="m8.5 12 2.5 2.5 4.5-5" />
+          </svg>
+        </span>
+        <h3>Un solo responsable</h3>
+        <p>Un único interlocutor para toda la obra y la garantía directa con quien fabricó e instaló tu cancha.</p>
+      </article>
+      <article class="beneficio">
+        <span class="beneficio__ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 21V9l6 4V9l6 4V5h6v16z" />
+            <path d="M7 17h2M13 17h2M18 9v.01" />
+          </svg>
+        </span>
+        <h3>Fabricación propia</h3>
+        <p>La estructura y la malla las fabricamos nosotros, en taller. Sin intermediarios entre la fábrica y tu cancha.</p>
+      </article>
+      <article class="beneficio">
+        <span class="beneficio__ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 8 12 3 3 8v8l9 5 9-5z" />
+            <path d="m3 8 9 5 9-5M12 13v8" />
+          </svg>
+        </span>
+        <h3>Todo incluido</h3>
+        <p>Estructura, vidrios, malla, césped, red, iluminación LED, traslado e instalación. Llega todo y queda lista para jugar.</p>
+      </article>
+    </div>
+
+    <div class="franja">
+      <p>De nuestro taller a tu galpón: la cancha instalada y lista para abrir, sin dolores de cabeza.</p>
+      <BotonWa texto={MSG.base}>Pedí tu presupuesto</BotonWa>
+    </div>
+  </div>
+</section>

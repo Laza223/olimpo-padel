@@ -1,0 +1,53 @@
+---
+import Pendiente from '../components/Pendiente.astro';
+import { site, isMissing, whatsappTexto, waHref, MSG } from '../lib/site';
+const wa = whatsappTexto();
+---
+<footer class="pie">
+  <div class="contenedor">
+    <div class="pie__grid">
+      <div class="pie__marca">
+        <a class="pie__logo" href="#inicio"><img src="/media/logo-white.png" width="900" height="258" alt="Olimpo Padel" loading="lazy" /></a>
+        <p>Fabricamos e instalamos canchas de pádel Full Panorámica llave en mano, para espacios techados. También hacemos el techado.</p>
+      </div>
+      <dl class="pie__datos">
+        <div>
+          <dt>WhatsApp</dt>
+          <dd>{wa ? <a href={waHref(MSG.base)} target="_blank" rel="noopener">{wa}</a> : <Pendiente campo="whatsapp" />}</dd>
+        </div>
+        <div>
+          <dt>Instagram</dt>
+          <dd>
+            {
+              isMissing(site.instagram) ? (
+                <Pendiente campo="instagram" />
+              ) : (
+                <a href={`https://www.instagram.com/${site.instagram}/`} target="_blank" rel="noopener">
+                  @{site.instagram}
+                </a>
+              )
+            }
+          </dd>
+        </div>
+        <div>
+          <dt>Fabricamos en</dt>
+          <dd>{isMissing(site.zona) ? <Pendiente campo="zona" /> : site.zona}</dd>
+        </div>
+        {
+          site.email && (
+            <div>
+              <dt>Email</dt>
+              <dd>
+                <a href={`mailto:${site.email}`}>{site.email}</a>
+              </dd>
+            </div>
+          )
+        }
+      </dl>
+    </div>
+    <div class="pie__legal">
+      <span>© 2026 Olimpo Padel</span>
+      <span>Las imágenes marcadas como ilustrativas no son obras de Olimpo Padel.</span>
+    </div>
+  </div>
+</footer>

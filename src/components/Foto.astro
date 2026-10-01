@@ -1,0 +1,27 @@
+---
+// <picture> AVIF/WebP/JPEG desde public/media/<nombre>-<ancho>.<ext>.
+interface Props {
+  nombre: string;
+  anchos: number[];
+  alto: number; // alto del ancho mayor
+  alt: string;
+  sizes: string;
+  prioridad?: boolean;
+}
+const { nombre, anchos, alto, alt, sizes, prioridad = false } = Astro.props;
+const set = (ext: string) => anchos.map((w) => `/media/${nombre}-${w}.${ext} ${w}w`).join(', ');
+const mayor = anchos[anchos.length - 1];
+---
+<picture>
+  <source type="image/avif" srcset={set('avif')} sizes={sizes} />
+  <source type="image/webp" srcset={set('webp')} sizes={sizes} />
+  <img
+    src={`/media/${nombre}-${mayor}.jpg`}
+    width={mayor}
+    height={alto}
+    alt={alt}
+    loading={prioridad ? 'eager' : 'lazy'}
+    fetchpriority={prioridad ? 'high' : 'auto'}
+    decoding={prioridad ? 'sync' : 'async'}
+  />
+</picture>

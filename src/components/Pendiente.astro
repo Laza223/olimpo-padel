@@ -1,0 +1,6 @@
+---
+import { LABELS, type CampoPendiente } from '../lib/site';
+interface Props { campo: CampoPendiente }
+const { campo } = Astro.props;
+---
+<mark class="pendiente">Completar: {LABELS[campo]}</mark>

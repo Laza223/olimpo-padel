@@ -1,0 +1,389 @@
+[
+  {
+    "file": "fab-corte.mp4",
+    "kind": "video real",
+    "width": 540,
+    "height": 960,
+    "bytes": 625186,
+    "source": "IMG_4059.MOV",
+    "provenance": "Video real de fabricacion: corte de cano con sensitiva, con chispas. Recorte y compresion, sin retoque."
+  },
+  {
+    "file": "fab-corte.webm",
+    "kind": "video real",
+    "width": 540,
+    "height": 960,
+    "bytes": 860035,
+    "source": "IMG_4059.MOV",
+    "provenance": "Video real de fabricacion: corte de cano con sensitiva, con chispas. Recorte y compresion, sin retoque."
+  },
+  {
+    "file": "fab-corte-poster.jpg",
+    "kind": "poster",
+    "width": 540,
+    "height": 960,
+    "bytes": 69485,
+    "source": "IMG_4059.MOV",
+    "provenance": "Video real de fabricacion: corte de cano con sensitiva, con chispas. Recorte y compresion, sin retoque."
+  },
+  {
+    "file": "fab-corte-poster.avif",
+    "kind": "poster",
+    "width": 540,
+    "height": 960,
+    "bytes": 23486,
+    "source": "IMG_4059.MOV",
+    "provenance": "Video real de fabricacion: corte de cano con sensitiva, con chispas. Recorte y compresion, sin retoque."
+  },
+  {
+    "file": "fab-soldadura.mp4",
+    "kind": "video real",
+    "width": 540,
+    "height": 960,
+    "bytes": 573229,
+    "source": "IMG_4061.MOV",
+    "provenance": "Video real de fabricacion: soldadura de la esquina de un pano de malla. Recorte y compresion, sin retoque."
+  },
+  {
+    "file": "fab-soldadura.webm",
+    "kind": "video real",
+    "width": 540,
+    "height": 960,
+    "bytes": 608273,
+    "source": "IMG_4061.MOV",
+    "provenance": "Video real de fabricacion: soldadura de la esquina de un pano de malla. Recorte y compresion, sin retoque."
+  },
+  {
+    "file": "fab-soldadura-poster.jpg",
+    "kind": "poster",
+    "width": 540,
+    "height": 960,
+    "bytes": 66711,
+    "source": "IMG_4061.MOV",
+    "provenance": "Video real de fabricacion: soldadura de la esquina de un pano de malla. Recorte y compresion, sin retoque."
+  },
+  {
+    "file": "fab-soldadura-poster.avif",
+    "kind": "poster",
+    "width": 540,
+    "height": 960,
+    "bytes": 22307,
+    "source": "IMG_4061.MOV",
+    "provenance": "Video real de fabricacion: soldadura de la esquina de un pano de malla. Recorte y compresion, sin retoque."
+  },
+  {
+    "file": "fab-amolado.mp4",
+    "kind": "video real",
+    "width": 540,
+    "height": 960,
+    "bytes": 704433,
+    "source": "IMG_4057.MOV",
+    "provenance": "Video real de fabricacion: amolado de un pano de malla terminado, con chispas. Recorte y compresion, sin retoque."
+  },
+  {
+    "file": "fab-amolado.webm",
+    "kind": "video real",
+    "width": 540,
+    "height": 960,
+    "bytes": 912502,
+    "source": "IMG_4057.MOV",
+    "provenance": "Video real de fabricacion: amolado de un pano de malla terminado, con chispas. Recorte y compresion, sin retoque."
+  },
+  {
+    "file": "fab-amolado-poster.jpg",
+    "kind": "poster",
+    "width": 540,
+    "height": 960,
+    "bytes": 64193,
+    "source": "IMG_4057.MOV",
+    "provenance": "Video real de fabricacion: amolado de un pano de malla terminado, con chispas. Recorte y compresion, sin retoque."
+  },
+  {
+    "file": "fab-amolado-poster.avif",
+    "kind": "poster",
+    "width": 540,
+    "height": 960,
+    "bytes": 22972,
+    "source": "IMG_4057.MOV",
+    "provenance": "Video real de fabricacion: amolado de un pano de malla terminado, con chispas. Recorte y compresion, sin retoque."
+  },
+  {
+    "file": "techado-exterior-480.avif",
+    "kind": "foto real",
+    "width": 480,
+    "height": 640,
+    "bytes": 24578,
+    "source": "WhatsApp Image 2026-07-27 at 3.49.13 PM.jpeg",
+    "provenance": "Foto real de obra de techado de un socio de estructuras. Recorte y compresion."
+  },
+  {
+    "file": "techado-exterior-480.webp",
+    "kind": "foto real",
+    "width": 480,
+    "height": 640,
+    "bytes": 50786,
+    "source": "WhatsApp Image 2026-07-27 at 3.49.13 PM.jpeg",
+    "provenance": "Foto real de obra de techado de un socio de estructuras. Recorte y compresion."
+  },
+  {
+    "file": "techado-exterior-480.jpg",
+    "kind": "foto real",
+    "width": 480,
+    "height": 640,
+    "bytes": 60569,
+    "source": "WhatsApp Image 2026-07-27 at 3.49.13 PM.jpeg",
+    "provenance": "Foto real de obra de techado de un socio de estructuras. Recorte y compresion."
+  },
+  {
+    "file": "techado-exterior-960.avif",
+    "kind": "foto real",
+    "width": 960,
+    "height": 1280,
+    "bytes": 82809,
+    "source": "WhatsApp Image 2026-07-27 at 3.49.13 PM.jpeg",
+    "provenance": "Foto real de obra de techado de un socio de estructuras. Recorte y compresion."
+  },
+  {
+    "file": "techado-exterior-960.webp",
+    "kind": "foto real",
+    "width": 960,
+    "height": 1280,
+    "bytes": 168924,
+    "source": "WhatsApp Image 2026-07-27 at 3.49.13 PM.jpeg",
+    "provenance": "Foto real de obra de techado de un socio de estructuras. Recorte y compresion."
+  },
+  {
+    "file": "techado-exterior-960.jpg",
+    "kind": "foto real",
+    "width": 960,
+    "height": 1280,
+    "bytes": 206613,
+    "source": "WhatsApp Image 2026-07-27 at 3.49.13 PM.jpeg",
+    "provenance": "Foto real de obra de techado de un socio de estructuras. Recorte y compresion."
+  },
+  {
+    "file": "techado-interior-480.avif",
+    "kind": "foto real",
+    "width": 480,
+    "height": 640,
+    "bytes": 12292,
+    "source": "WhatsApp Image 2026-07-27 at 3.49.14 PM.jpeg",
+    "provenance": "Foto real de obra de techado de un socio de estructuras. Recorte y compresion."
+  },
+  {
+    "file": "techado-interior-480.webp",
+    "kind": "foto real",
+    "width": 480,
+    "height": 640,
+    "bytes": 25310,
+    "source": "WhatsApp Image 2026-07-27 at 3.49.14 PM.jpeg",
+    "provenance": "Foto real de obra de techado de un socio de estructuras. Recorte y compresion."
+  },
+  {
+    "file": "techado-interior-480.jpg",
+    "kind": "foto real",
+    "width": 480,
+    "height": 640,
+    "bytes": 33984,
+    "source": "WhatsApp Image 2026-07-27 at 3.49.14 PM.jpeg",
+    "provenance": "Foto real de obra de techado de un socio de estructuras. Recorte y compresion."
+  },
+  {
+    "file": "techado-interior-960.avif",
+    "kind": "foto real",
+    "width": 960,
+    "height": 1280,
+    "bytes": 33460,
+    "source": "WhatsApp Image 2026-07-27 at 3.49.14 PM.jpeg",
+    "provenance": "Foto real de obra de techado de un socio de estructuras. Recorte y compresion."
+  },
+  {
+    "file": "techado-interior-960.webp",
+    "kind": "foto real",
+    "width": 960,
+    "height": 1280,
+    "bytes": 76102,
+    "source": "WhatsApp Image 2026-07-27 at 3.49.14 PM.jpeg",
+    "provenance": "Foto real de obra de techado de un socio de estructuras. Recorte y compresion."
+  },
+  {
+    "file": "techado-interior-960.jpg",
+    "kind": "foto real",
+    "width": 960,
+    "height": 1280,
+    "bytes": 105934,
+    "source": "WhatsApp Image 2026-07-27 at 3.49.14 PM.jpeg",
+    "provenance": "Foto real de obra de techado de un socio de estructuras. Recorte y compresion."
+  },
+  {
+    "file": "techado-estructura-480.avif",
+    "kind": "foto real",
+    "width": 480,
+    "height": 854,
+    "bytes": 33723,
+    "source": "WhatsApp Image 2026-07-27 at 3.49.12 PM (1).jpeg",
+    "provenance": "Foto real de obra de techado de un socio de estructuras. Recorte y compresion."
+  },
+  {
+    "file": "techado-estructura-480.webp",
+    "kind": "foto real",
+    "width": 480,
+    "height": 854,
+    "bytes": 68814,
+    "source": "WhatsApp Image 2026-07-27 at 3.49.12 PM (1).jpeg",
+    "provenance": "Foto real de obra de techado de un socio de estructuras. Recorte y compresion."
+  },
+  {
+    "file": "techado-estructura-480.jpg",
+    "kind": "foto real",
+    "width": 480,
+    "height": 854,
+    "bytes": 86017,
+    "source": "WhatsApp Image 2026-07-27 at 3.49.12 PM (1).jpeg",
+    "provenance": "Foto real de obra de techado de un socio de estructuras. Recorte y compresion."
+  },
+  {
+    "file": "cancha-techada-800.avif",
+    "kind": "foto real",
+    "width": 800,
+    "height": 600,
+    "bytes": 18492,
+    "source": "model-full-panoramica.webp",
+    "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
+  },
+  {
+    "file": "cancha-techada-800.webp",
+    "kind": "foto real",
+    "width": 800,
+    "height": 600,
+    "bytes": 61994,
+    "source": "model-full-panoramica.webp",
+    "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
+  },
+  {
+    "file": "cancha-techada-800.jpg",
+    "kind": "foto real",
+    "width": 800,
+    "height": 600,
+    "bytes": 70436,
+    "source": "model-full-panoramica.webp",
+    "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
+  },
+  {
+    "file": "cancha-noche-640.avif",
+    "kind": "foto real",
+    "width": 640,
+    "height": 640,
+    "bytes": 15818,
+    "source": "hero-court.webp",
+    "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
+  },
+  {
+    "file": "cancha-noche-640.webp",
+    "kind": "foto real",
+    "width": 640,
+    "height": 640,
+    "bytes": 39592,
+    "source": "hero-court.webp",
+    "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
+  },
+  {
+    "file": "cancha-noche-640.jpg",
+    "kind": "foto real",
+    "width": 640,
+    "height": 640,
+    "bytes": 50856,
+    "source": "hero-court.webp",
+    "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
+  },
+  {
+    "file": "instalacion-640.avif",
+    "kind": "foto real",
+    "width": 640,
+    "height": 640,
+    "bytes": 34890,
+    "source": "project-3.webp",
+    "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
+  },
+  {
+    "file": "instalacion-640.webp",
+    "kind": "foto real",
+    "width": 640,
+    "height": 640,
+    "bytes": 61674,
+    "source": "project-3.webp",
+    "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
+  },
+  {
+    "file": "instalacion-640.jpg",
+    "kind": "foto real",
+    "width": 640,
+    "height": 640,
+    "bytes": 78228,
+    "source": "project-3.webp",
+    "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
+  },
+  {
+    "file": "cancha-atardecer-640.avif",
+    "kind": "foto real",
+    "width": 640,
+    "height": 640,
+    "bytes": 14029,
+    "source": "hero-court-new.png",
+    "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
+  },
+  {
+    "file": "cancha-atardecer-640.webp",
+    "kind": "foto real",
+    "width": 640,
+    "height": 640,
+    "bytes": 33176,
+    "source": "hero-court-new.png",
+    "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
+  },
+  {
+    "file": "cancha-atardecer-640.jpg",
+    "kind": "foto real",
+    "width": 640,
+    "height": 640,
+    "bytes": 47525,
+    "source": "hero-court-new.png",
+    "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
+  },
+  {
+    "file": "cancha-atardecer-1024.avif",
+    "kind": "foto real",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 28902,
+    "source": "hero-court-new.png",
+    "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
+  },
+  {
+    "file": "cancha-atardecer-1024.webp",
+    "kind": "foto real",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 75248,
+    "source": "hero-court-new.png",
+    "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
+  },
+  {
+    "file": "cancha-atardecer-1024.jpg",
+    "kind": "foto real",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 108184,
+    "source": "hero-court-new.png",
+    "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
+  },
+  {
+    "file": "og.jpg",
+    "kind": "og",
+    "width": 1200,
+    "height": 630,
+    "bytes": 103119,
+    "source": "model-full-panoramica.webp",
+    "provenance": "Recorte de un render ilustrativo con el logo encima."
+  }
+]

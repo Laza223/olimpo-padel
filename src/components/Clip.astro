@@ -1,0 +1,15 @@
+---
+// Loop real de fabricación. Sin JS queda el póster; main.ts carga el video al entrar en pantalla.
+interface Props {
+  nombre: string;
+  label: string;
+}
+const { nombre, label } = Astro.props;
+---
+<figure class="clip">
+  <video muted loop playsinline preload="none" poster={`/media/${nombre}-poster.jpg`} width="540" height="960" data-lazy-video aria-label={label}>
+    <source data-src={`/media/${nombre}.webm`} type="video/webm" />
+    <source data-src={`/media/${nombre}.mp4`} type="video/mp4" />
+  </video>
+  <figcaption><slot /></figcaption>
+</figure>

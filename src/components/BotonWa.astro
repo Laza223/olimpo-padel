@@ -1,0 +1,11 @@
+---
+import IconoWa from './IconoWa.astro';
+import { waHref } from '../lib/site';
+interface Props {
+  texto: string;
+  class?: string;
+  [attr: string]: unknown;
+}
+const { texto, class: cls = 'btn btn--rojo', ...rest } = Astro.props;
+---
+<a class={cls} href={waHref(texto)} target="_blank" rel="noopener" {...rest}><IconoWa /><slot /></a>

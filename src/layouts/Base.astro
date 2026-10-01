@@ -1,0 +1,90 @@
+---
+import '../styles/main.css';
+import { site, faltan, LABELS, isMissing, jsonLd, MSG, waHref } from '../lib/site';
+import BotonWa from '../components/BotonWa.astro';
+import IconoWa from '../components/IconoWa.astro';
+import Pie from '../sections/Pie.astro';
+
+interface Props {
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+const dominio = isMissing(site.dominio) ? null : site.dominio;
+---
+
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0b2132" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="Olimpo Padel" />
+    <meta property="og:title" content="Olimpo Padel · Canchas de pádel llave en mano" />
+    <meta
+      property="og:description"
+      content="Fabricamos e instalamos canchas de pádel Full Panorámica para espacios techados. Presupuesto por WhatsApp en 24 horas."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    {
+      dominio && (
+        <>
+          <link rel="canonical" href={`${dominio}/`} />
+          <meta property="og:url" content={`${dominio}/`} />
+          <meta property="og:image" content={`${dominio}/media/og.jpg`} />
+          <meta name="twitter:image" content={`${dominio}/media/og.jpg`} />
+        </>
+      )
+    }
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preload" href="/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin />
+    {jsonLd().map((o) => <script type="application/ld+json" set:html={JSON.stringify(o)} />)}
+  </head>
+  <body>
+    {
+      faltan.length > 0 && (
+        <div class="banda-pendientes" role="status">
+          <strong>Faltan datos:</strong> {faltan.map((k) => LABELS[k]).join(', ')}. Se completan en <code>site.config.js</code>.
+        </div>
+      )
+    }
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+    <header class="top">
+      <div class="contenedor top__in">
+        <a class="top__logo" href="#inicio" aria-label="Olimpo Padel, inicio">
+          <img src="/media/logo-white.png" width="900" height="258" alt="Olimpo Padel" />
+        </a>
+        <nav class="top__nav" aria-label="Secciones">
+          <a href="#cancha">La cancha</a>
+          <a href="#llave-en-mano">Llave en mano</a>
+          <a href="#como-trabajamos">Cómo trabajamos</a>
+          <a href="#techado">Techado</a>
+          <a href="#preguntas">Preguntas</a>
+        </nav>
+        <BotonWa texto={MSG.base} class="btn btn--rojo top__cta">
+          <span class="largo">Pedí tu presupuesto</span><span class="corto">Presupuesto</span>
+        </BotonWa>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <slot />
+    </main>
+
+    <Pie />
+
+    <a class="wa-flotante" href={waHref(MSG.base)} target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+      <IconoWa />
+    </a>
+  </body>
+</html>
+
+<script>
+  import '../scripts/main';
+</script>

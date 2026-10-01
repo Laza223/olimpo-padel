@@ -1,0 +1,25 @@
+---
+import Clip from '../components/Clip.astro';
+---
+<section class="seccion oscuro" id="fabricacion" aria-labelledby="fab-titulo" style="background: var(--navy-2)">
+  <div class="contenedor fabrica__grid">
+    <div>
+      <h2 class="titulo" id="fab-titulo">Fabricación propia. Compromiso real.</h2>
+      <p class="bajada">
+        La estructura de acero y los paños de malla de tu cancha se cortan y se sueldan en taller, a mano. El armado final lo hace
+        nuestro equipo en tu obra.
+      </p>
+      <p class="fabrica__cita">No somos revendedores. Somos fabricantes.</p>
+      <p class="fabrica__dato">El equipo ya fabricó e instaló unas 15 canchas.</p>
+    </div>
+
+    <div>
+      <div class="clips">
+        <Clip nombre="fab-corte" label="Corte de caño con sensitiva, con chispas">Corte a medida</Clip>
+        <Clip nombre="fab-soldadura" label="Soldadura de la esquina de un paño de malla">Soldadura</Clip>
+        <Clip nombre="fab-amolado" label="Terminación de un paño de malla con amoladora">Terminación</Clip>
+      </div>
+      <p class="fabrica__pie">Videos reales del soldador que fabrica nuestras canchas.</p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,55 @@
+---
+import BotonWa from '../components/BotonWa.astro';
+import Foto from '../components/Foto.astro';
+import { MSG } from '../lib/site';
+---
+<section class="seccion" id="techado" aria-labelledby="techado-titulo">
+  <div class="contenedor techado__grid">
+    <div>
+      <h2 class="titulo" id="techado-titulo">¿Tenés el terreno pero no el galpón?</h2>
+      <p class="bajada">
+        También hacemos el techado. Lo diseñamos para tu obra y lo presupuestamos junto con la cancha, así tenés un solo responsable
+        para todo.
+      </p>
+      <ul class="techado__lista" role="list">
+        <li>Diseñado para tu obra</li>
+        <li>Presupuesto aparte de la cancha, en la misma charla</li>
+        <li>Un solo responsable para el techado y la cancha</li>
+      </ul>
+      <BotonWa texto={MSG.techado} class="btn btn--navy btn--grande">Consultá por cancha y techado</BotonWa>
+    </div>
+
+    <div>
+      <div class="fotos">
+        <figure>
+          <Foto
+            nombre="techado-exterior"
+            anchos={[480, 960]}
+            alto={1280}
+            sizes="(min-width: 960px) 30vw, 55vw"
+            alt="Estructura de un techado terminada, vista desde abajo contra el cielo"
+          />
+        </figure>
+        <figure>
+          <Foto
+            nombre="techado-interior"
+            anchos={[480, 960]}
+            alto={1280}
+            sizes="(min-width: 960px) 22vw, 45vw"
+            alt="Interior de un galpón recién techado, con piso de hormigón alisado"
+          />
+        </figure>
+        <figure>
+          <Foto
+            nombre="techado-estructura"
+            anchos={[480]}
+            alto={854}
+            sizes="(min-width: 960px) 22vw, 45vw"
+            alt="Cabriadas y correas de un techado en montaje"
+          />
+        </figure>
+      </div>
+      <p class="fotos__pie">Fotos reales de una obra de techado de nuestro socio de estructuras.</p>
+    </div>
+  </div>
+</section>

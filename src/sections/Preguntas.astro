@@ -1,0 +1,27 @@
+---
+import Pendiente from '../components/Pendiente.astro';
+import { FAQ } from '../lib/faq';
+import { site, isMissing } from '../lib/site';
+---
+<section class="seccion" id="preguntas" aria-labelledby="faq-titulo">
+  <div class="contenedor">
+    <h2 class="titulo titulo--centro" id="faq-titulo">Preguntas frecuentes</h2>
+    <p class="bajada bajada--centro">Lo que más nos preguntan antes de encargar una cancha.</p>
+    <div class="faq">
+      {
+        FAQ.map(({ q, a, dato }) => (
+          <details>
+            <summary>{q}</summary>
+            <div class="faq__a">
+              {dato === 'cobertura' ? (
+                <p>{isMissing(site.cobertura) ? <Pendiente campo="cobertura" /> : site.cobertura}</p>
+              ) : (
+                <Fragment set:html={a} />
+              )}
+            </div>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+</section>

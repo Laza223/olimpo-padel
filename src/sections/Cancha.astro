@@ -1,0 +1,59 @@
+---
+import BotonWa from '../components/BotonWa.astro';
+import Foto from '../components/Foto.astro';
+import { MSG } from '../lib/site';
+
+const specs = [
+  ['Medidas reglamentarias', ': 20 × 10 m'],
+  ['18 vidrios templados de 10 mm', ' en fondos y esquinas (12 mm, opcional)'],
+  ['Esquinas sin postes', ': nada tapa la vista del juego'],
+  ['Vidrios sin agujeros', ', sin tornillos a la vista'],
+  ['Estructura de acero', ' pintada en negro, fabricada por nosotros'],
+  ['Césped sintético', ' con arena de sílice'],
+  ['Iluminación LED', ' con 4 luminarias en mástiles propios'],
+  ['Red y postes', ' reglamentarios, incluidos'],
+];
+---
+<section class="seccion" id="cancha" aria-labelledby="cancha-titulo">
+  <div class="contenedor">
+    <h2 class="titulo" id="cancha-titulo">Una cancha, hecha para jugar bajo techo</h2>
+    <p class="bajada">
+      Hacemos un solo modelo y lo hacemos bien: la Full Panorámica, pensada para galpones y clubes techados.
+    </p>
+
+    <article class="modelo">
+      <figure class="modelo__media">
+        <span class="modelo__chip">Estándar 20 × 10&nbsp;m</span>
+        <Foto
+          nombre="cancha-esquina"
+          anchos={[600]}
+          alto={600}
+          sizes="(min-width: 960px) 52vw, 100vw"
+          alt="Esquina de una cancha de pádel donde se juntan dos vidrios, dentro de un galpón"
+        />
+        <figcaption class="etiqueta">Imagen ilustrativa</figcaption>
+      </figure>
+      <div class="modelo__cuerpo">
+        <h3 class="modelo__nombre">Full Panorámica</h3>
+        <p class="modelo__sub">Visión panorámica · Para espacios techados</p>
+        <ul class="specs" role="list">
+          {
+            specs.map(([fuerte, resto]) => (
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="m8 12.5 2.8 2.8L16.5 9.5" />
+                </svg>
+                <span>
+                  <strong>{fuerte}</strong>{resto}
+                </span>
+              </li>
+            ))
+          }
+        </ul>
+        <BotonWa texto={MSG.modelo} class="btn btn--rojo btn--grande btn--ancho">Consultar precio</BotonWa>
+        <p class="modelo__nota">¿No tenés galpón? <a href="#techado">También hacemos el techado.</a></p>
+      </div>
+    </article>
+  </div>
+</section>
