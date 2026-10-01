@@ -20,6 +20,8 @@
   --celeste-claro: #7cc0dc;
   --rojo: #d42f38;
   --rojo-2: #b8242d;
+  --wa: #25d366;
+  --wa-2: #1ebe5b;
   --tinta: #0b2132;
   --tinta-2: #4a5d6d;
   --linea: #dbe3ea;
@@ -245,13 +247,14 @@ mark.pendiente {
 .btn:active {
   transform: translateY(1px);
 }
-.btn--rojo {
-  background: var(--rojo);
+.btn--wa {
+  background: var(--wa);
   color: #fff;
-  box-shadow: 0 10px 24px -10px rgb(212 47 56 / 0.7);
+  text-shadow: 0 1px 2px rgb(0 0 0 / 0.22);
+  box-shadow: 0 10px 24px -10px rgb(37 211 102 / 0.65);
 }
-.btn--rojo:hover {
-  background: var(--rojo-2);
+.btn--wa:hover {
+  background: var(--wa-2);
 }
 .btn--linea {
   border-color: rgb(255 255 255 / 0.35);
@@ -435,7 +438,7 @@ mark.pendiente {
 }
 .stats {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 1.75rem 1.5rem;
   margin-top: clamp(2.5rem, 2rem + 3vw, 4.5rem);
   padding-top: 2rem;
@@ -475,15 +478,17 @@ mark.pendiente {
     grid-template-columns: 1.05fr 1fr;
     gap: 4rem;
   }
-  .stats {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
 
 /* ── la cancha ── */
-.modelo {
+.modelos {
   margin-top: clamp(2.5rem, 2rem + 2vw, 3.5rem);
   display: grid;
+  gap: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+}
+.modelo {
+  display: flex;
+  flex-direction: column;
   background: var(--blanco);
   border-radius: var(--r-lg);
   overflow: hidden;
@@ -491,10 +496,18 @@ mark.pendiente {
 }
 .modelo__media {
   position: relative;
-  min-height: 280px;
+  aspect-ratio: 4 / 3;
   background: var(--navy);
 }
+.modelo__media {
+  overflow: hidden;
+}
+.modelo__media picture {
+  display: block;
+  height: 100%;
+}
 .modelo__media img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -512,7 +525,13 @@ mark.pendiente {
   border-radius: 999px;
 }
 .modelo__cuerpo {
-  padding: clamp(1.75rem, 1.25rem + 2vw, 3rem);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: clamp(1.5rem, 1.1rem + 1.5vw, 2.25rem);
+}
+.modelo__cuerpo .btn {
+  margin-top: auto;
 }
 .modelo__nombre {
   font-weight: 900;
@@ -547,7 +566,8 @@ mark.pendiente {
   font-weight: 700;
 }
 .modelo__nota {
-  margin-top: 1rem;
+  margin-top: 1.75rem;
+  text-align: center;
   font-size: 0.9375rem;
   color: var(--tinta-2);
 }
@@ -555,9 +575,9 @@ mark.pendiente {
   color: var(--azul);
   font-weight: 700;
 }
-@media (min-width: 960px) {
-  .modelo {
-    grid-template-columns: 1.1fr 1fr;
+@media (min-width: 900px) {
+  .modelos {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -726,20 +746,6 @@ mark.pendiente {
   line-height: 1;
   color: var(--rojo);
 }
-.fabrica__dato {
-  margin-top: 1.5rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-weight: 700;
-}
-.fabrica__dato::before {
-  content: '';
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--rojo);
-}
 .clips {
   display: grid;
   grid-auto-flow: column;
@@ -836,59 +842,6 @@ mark.pendiente {
   .techado__grid {
     grid-template-columns: 1fr 1.1fr;
     gap: 4.5rem;
-  }
-}
-
-/* ── garantía y plazos ── */
-.garantias {
-  display: grid;
-  gap: 1.25rem;
-  margin-top: clamp(2.5rem, 2rem + 2vw, 3.5rem);
-}
-.garantia {
-  background: var(--blanco);
-  border-radius: var(--r);
-  padding: 1.75rem;
-  box-shadow: var(--sombra);
-}
-.garantia .garantia__n {
-  font-weight: 900;
-  font-stretch: 85%;
-  font-size: clamp(2.4rem, 2rem + 1.5vw, 3rem);
-  line-height: 1;
-  color: var(--navy);
-}
-.garantia__n small {
-  font-size: 0.45em;
-  font-weight: 750;
-  margin-left: 0.2em;
-  text-transform: uppercase;
-  color: var(--rojo);
-}
-.garantia h3 {
-  margin-top: 0.75rem;
-  font-size: 1.125rem;
-  font-weight: 800;
-}
-.garantia p {
-  margin-top: 0.4rem;
-  color: var(--tinta-2);
-  font-size: 0.975rem;
-}
-.letra-chica {
-  margin-top: 1.5rem;
-  font-size: 0.875rem;
-  color: var(--tinta-2);
-  text-align: center;
-}
-@media (min-width: 700px) {
-  .garantias {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 1040px) {
-  .garantias {
-    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -1033,9 +986,8 @@ mark.pendiente {
   padding-top: 1.5rem;
   border-top: 1px solid rgb(255 255 255 / 0.08);
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 0.75rem;
+  justify-content: center;
+  text-align: center;
   font-size: 0.8125rem;
   color: #7f97aa;
 }
@@ -1056,15 +1008,15 @@ mark.pendiente {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: var(--rojo);
+  background: var(--wa);
   color: #fff;
-  box-shadow: 0 12px 28px -8px rgb(212 47 56 / 0.75);
+  box-shadow: 0 12px 28px -8px rgb(37 211 102 / 0.7);
   transition:
     transform 0.2s,
     background-color 0.2s;
 }
 .wa-flotante:hover {
-  background: var(--rojo-2);
+  background: var(--wa-2);
   transform: scale(1.05);
 }
 .wa-flotante .ico-wa {

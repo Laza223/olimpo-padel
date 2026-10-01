@@ -115,7 +115,8 @@ Paleta de marca (navy + celeste) para identidad y fondo, con el rojo aislado com
 - **Navy claro** (`#173a57`): variante tonal de Navy, usada solo en `:hover` del botón navy.
 
 ### Secondary
-- **Rojo** (`#d42f38`): el único color de acción del sistema. Fondo del botón de WhatsApp (fijo y flotante), barra bajo cada `.titulo`, número de cada paso, marca de cada ítem de las listas (techado, fabricación), unidad de cada cifra grande, y el signo `+` del acordeón de FAQ al abrirse.
+- **Verde WhatsApp** (`#25d366`, hover `#1ebe5b`; token `--wa`): el color de acción. Fondo de todos los botones que van a WhatsApp (fijo, flotante y CTA), con texto navy para mantener el contraste.
+- **Rojo** (`#d42f38`): solo detalle. Barra bajo cada `.titulo`, número de cada paso, marca de cada ítem de las listas (techado, fabricación), unidad de cada cifra grande, y el signo `+` del acordeón de FAQ al abrirse.
 - **Rojo oscuro** (`#b8242d`): estado `:hover`/`:active` del rojo, nunca un tono independiente.
 
 ### Tertiary
@@ -131,7 +132,7 @@ Paleta de marca (navy + celeste) para identidad y fondo, con el rojo aislado com
 - **Blanco** (`#ffffff`): tarjetas, texto sobre fondo oscuro, fondo del body.
 
 ### Named Rules
-**La Regla del Rojo Único.** El rojo es el único color de acción del sistema: vive en el botón de WhatsApp, la barra bajo cada título, los números de paso, las marcas de lista y las unidades de las cifras. Nunca es fondo de sección ni color de texto corrido.
+**La Regla del Verde de Acción.** Todo lo que lleva a WhatsApp es verde WhatsApp; el rojo ya no es de acción y vive solo como detalle: la barra bajo cada título, los números de paso, las marcas de lista y las unidades de las cifras. Nunca es fondo de sección ni color de texto corrido.
 
 ## Typography
 
@@ -160,7 +161,7 @@ Mobile-first: todas las grillas de dos columnas (hero, modelo, pasos, fabricaci�
 Sistema plano con sombras suaves y difusas de tinte navy; nada de sombras duras ni bordes gruesos como recurso de profundidad. Las secciones oscuras usan bloques de color sólido (navy / navy-2), no capas tonales tipo Material.
 
 ### Shadow Vocabulary
-- **Sombra** (`0 1px 2px rgb(11 33 50 / 0.06), 0 12px 32px -12px rgb(11 33 50 / 0.18)`): tarjetas en reposo (beneficios, garantías).
+- **Sombra** (`0 1px 2px rgb(11 33 50 / 0.06), 0 12px 32px -12px rgb(11 33 50 / 0.18)`): tarjetas en reposo (beneficios).
 - **Sombra alta** (`0 2px 4px rgb(11 33 50 / 0.08), 0 28px 60px -20px rgb(11 33 50 / 0.35)`): piezas destacadas — la foto del hero, la ficha de la cancha, la foto de los pasos.
 
 ### Named Rules
@@ -174,12 +175,12 @@ Dos radios conviven: 14px (`--r`) para tarjetas y bloques de contenido, 22px (`-
 
 ### Buttons
 - **Shape:** píldora completa (999px), altura mínima 52px (58px en la variante `--grande`).
-- **Primary (`.btn--rojo`):** fondo rojo, texto blanco, sombra roja translúcida (`0 10px 24px -10px rgb(212 47 56 / 0.7)`); es el único botón que lleva el ícono de WhatsApp inline. Hover: rojo oscuro.
+- **Primary (`.btn--wa`):** fondo verde WhatsApp, texto navy, sombra verde translúcida (`0 10px 24px -10px rgb(37 211 102 / 0.65)`); es el único botón que lleva el ícono de WhatsApp inline. Hover: verde más oscuro.
 - **Navy (`.btn--navy`):** fondo navy sólido, texto blanco. Hover: navy claro. Se usa cuando el botón vive sobre fondo claro y no debe competir con el rojo (CTA de techado).
 - **Ghost (`.btn--linea`):** borde blanco translúcido, texto blanco, fondo transparente; solo aparece sobre el hero navy como CTA secundario ("Ver la cancha").
 
 ### Cards / Containers
-- **Corner Style:** 22px (piezas destacadas) o 14px (garantías, FAQ).
+- **Corner Style:** 22px (piezas destacadas) o 14px (FAQ).
 - **Background:** blanco sobre fondo claro o navy.
 - **Shadow Strategy:** ver Elevation & Depth; sombra suave en reposo, sombra alta en piezas destacadas.
 - **Border:** ninguno salvo la línea de separación interna entre columnas de beneficios y el borde de 1px en `--linea` de las tarjetas de FAQ.
@@ -204,7 +205,7 @@ Dos radios conviven: 14px (`--r`) para tarjetas y bloques de contenido, 22px (`-
 ## Do's and Don'ts
 
 ### Do:
-- **Do** usar el rojo (`#d42f38`) solo en: botón de WhatsApp, barra bajo título, número de paso, marca de lista, unidad de cifra y el signo del FAQ abierto.
+- **Do** usar el verde WhatsApp para todo botón que va a WhatsApp y el rojo (`#d42f38`) solo en: barra bajo título, número de paso, marca de lista, unidad de cifra y el signo del FAQ abierto.
 - **Do** etiquetar toda imagen de terceros/render con la píldora "Imagen ilustrativa" (`.etiqueta`).
 - **Do** rotular el contenido real (fotos y videos del taller/obra) como "reales" en una leyenda de texto simple, nunca con la píldora de `.etiqueta`.
 - **Do** tomar todo dato de contacto (WhatsApp, Instagram, dominio, zona, cobertura) únicamente de `site.config.js`, mostrando `<mark class="pendiente">` mientras diga `COMPLETAR`.

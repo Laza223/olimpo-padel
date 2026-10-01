@@ -6,6 +6,6 @@ interface Props {
   class?: string;
   [attr: string]: unknown;
 }
-const { texto, class: cls = 'btn btn--rojo', ...rest } = Astro.props;
+const { texto, class: cls = 'btn btn--wa', ...rest } = Astro.props;
 ---
 <a class={cls} href={waHref(texto)} target="_blank" rel="noopener" {...rest}><IconoWa /><slot /></a>

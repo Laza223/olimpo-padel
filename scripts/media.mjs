@@ -23,7 +23,7 @@ const LOGO_WHITE_SRC = 'C:\\Users\\Lazar\\Documents\\OLIMPO PADEL\\branding\\log
 // Fuentes dentro del repo.
 const TALLER_DIR = path.join(ROOT, 'assets-fuente', 'reales', 'taller-fotos');
 const TECHADO_DIR = path.join(ROOT, 'assets-fuente', 'reales', 'galpon-techado-obra');
-const ILUSTRATIVAS_DIR = path.join(ROOT, 'assets-fuente', 'renders-ia-elite');
+const MODELOS_DIR = path.join(ROOT, 'assets-fuente', 'modelos');
 
 const PHOTO_WIDTHS = [480, 960, 1440];
 const MAX_LOOP_BYTES = 1_000_000;
@@ -221,18 +221,18 @@ function buildLogoWhite() {
   ]);
 }
 
-// Imagen para compartir (1200 × 630): la cancha techada ilustrativa con el logo encima.
+// Imagen para compartir (1200 × 630): la Full Panorámica ilustrativa con el logo encima (1024 × 538, sin agrandar).
 function buildOg() {
   const out = path.join(MEDIA_DIR, 'og.jpg');
   runFfmpeg([
     '-v', 'error', '-y',
-    '-i', path.join(ILUSTRATIVAS_DIR, 'model-full-panoramica.webp'),
+    '-i', path.join(MODELOS_DIR, 'full-panoramica.webp'),
     '-i', LOGO_WHITE_SRC,
     '-filter_complex',
-    '[0]scale=1200:900:flags=lanczos,crop=1200:630:0:170,drawbox=x=0:y=430:w=1200:h=200:color=0x0b2132@0.55:t=fill[b];[1]scale=380:-1[l];[b][l]overlay=48:630-48-h',
+    '[0]crop=1024:538:0:230,drawbox=x=0:y=338:w=1024:h=200:color=0x0b2132@0.55:t=fill[b];[1]scale=320:-1[l];[b][l]overlay=40:538-40-h',
     '-map_metadata', '-1', '-q:v', '3', out,
   ]);
-  pushMediaEntry({ file: out, kind: 'og', dims: ffprobeDims(out), source: 'model-full-panoramica.webp', provenance: 'Recorte de un render ilustrativo con el logo encima.' });
+  pushMediaEntry({ file: out, kind: 'og', dims: ffprobeDims(out), source: 'full-panoramica.webp', provenance: 'Recorte de un render ilustrativo con el logo encima.' });
 }
 
 function main() {
@@ -285,16 +285,11 @@ function main() {
   // Renders de IA de terceros: en la página van rotulados "Imagen ilustrativa", nunca como obra propia.
   const ilustrativa = 'Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado.';
   for (const [slug, archivo, widths] of [
-    ['cancha-techada', 'model-full-panoramica.webp', [800]],
-    ['cancha-noche', 'hero-court.webp', [640]],
-    ['cancha-atardecer', 'hero-court-new.png', [640, 1024]],
+    ['cancha-full', 'full-panoramica.webp', [640, 1024]],
+    ['cancha-panoramica', 'panoramica.webp', [640, 1024]],
   ]) {
-    makePhotoSet({ slug, srcPath: path.join(ILUSTRATIVAS_DIR, archivo), source: archivo, provenance: ilustrativa, widths });
+    makePhotoSet({ slug, srcPath: path.join(MODELOS_DIR, archivo), source: archivo, provenance: ilustrativa, widths });
   }
-  // Detalle de la esquina vidrio contra vidrio de la cancha techada (recorte 600 × 600, sin agrandar).
-  const esquina = path.join(tmpDir, 'cancha-esquina.png');
-  runFfmpeg(['-v', 'error', '-y', '-i', path.join(ILUSTRATIVAS_DIR, 'model-full-panoramica.webp'), '-vf', 'crop=600:600:100:0', esquina]);
-  makePhotoSet({ slug: 'cancha-esquina', srcPath: esquina, source: 'model-full-panoramica.webp (recorte)', provenance: ilustrativa, widths: [600] });
   buildOg();
 
   buildFavicons();

@@ -33,6 +33,7 @@ export const waHref = (text: string): string =>
 export const MSG = {
   base: 'Hola Olimpo Padel, vengo de la web. Quiero pedir presupuesto de una cancha de pádel.',
   modelo: 'Hola Olimpo Padel, vengo de la web. Quiero saber más de la cancha Full Panorámica.',
+  panoramica: 'Hola Olimpo Padel, vengo de la web. Quiero saber más de la cancha Panorámica.',
   techado: 'Hola Olimpo Padel, vengo de la web. Necesito cancha y techado, quiero pedir presupuesto.',
   cierre: 'Hola Olimpo Padel, vengo de la web. Les cuento de mi proyecto y quiero pedir presupuesto.',
 };
@@ -48,7 +49,7 @@ export function jsonLd(): object[] {
     '@type': 'Organization',
     name: 'Olimpo Padel',
     description:
-      'Fabricamos e instalamos canchas de pádel Full Panorámica llave en mano para espacios techados, y hacemos el techado.',
+      'Fabricamos e instalamos canchas de pádel Full Panorámica y Panorámica llave en mano, y hacemos el techado.',
   };
   if (!isMissing(config.dominio)) {
     org.url = `${config.dominio}/`;

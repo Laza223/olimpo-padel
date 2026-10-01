@@ -5,9 +5,9 @@ import { MSG } from '../lib/site';
 
 const pasos = [
   ['Contacto', 'Escribinos por WhatsApp y te asesoramos, sin compromiso.'],
-  ['Presupuesto', 'En 24 horas tenés una propuesta a medida, con cancha, logística e instalación por separado.'],
-  ['Fabricación', 'Fabricamos en taller la estructura y la malla de tu cancha.'],
-  ['Entrega', 'Llevamos todo hasta tu galpón o club.'],
+  ['Presupuesto', 'En 24 horas tenés tu presupuesto detallado a medida, con especificaciones técnicas, tiempos y formas de pago.'],
+  ['Fabricación', 'Fabricamos tu cancha a medida.'],
+  ['Entrega', 'Nos encargamos de toda la logística hasta el lugar.'],
   ['Instalación', 'Nuestro equipo la arma y te la entrega lista para jugar.'],
 ];
 ---
@@ -15,14 +15,14 @@ const pasos = [
   <div class="contenedor pasos__grid">
     <div>
       <h2 class="titulo" id="pasos-titulo">Así de simple es tener tu cancha</h2>
-      <p class="bajada">De la primera charla al primer partido, en 30 a 45 días hábiles.</p>
+      <p class="bajada">De la primera charla a tu cancha lista. Los plazos de tu obra van en el presupuesto.</p>
       <figure class="pasos__media">
         <Foto
-          nombre="cancha-noche"
+          nombre="cancha-panoramica"
           anchos={[640]}
           alto={640}
           sizes="(min-width: 960px) 40vw, 100vw"
-          alt="Cancha de pádel iluminada de noche"
+          alt="Cancha de pádel Panorámica de césped azul, con vidrios y estructura de acero negra"
         />
         <figcaption class="etiqueta">Imagen ilustrativa</figcaption>
       </figure>
@@ -42,7 +42,7 @@ const pasos = [
         }
       </ol>
       <div class="pasos__cta">
-        <BotonWa texto={MSG.base} class="btn btn--rojo btn--grande">Empezá por el paso 1</BotonWa>
+        <BotonWa texto={MSG.base} class="btn btn--wa btn--grande">Empezá por el paso 1</BotonWa>
       </div>
     </div>
   </div>

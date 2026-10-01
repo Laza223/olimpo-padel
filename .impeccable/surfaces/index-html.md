@@ -21,7 +21,7 @@ OWN-WORLD: Navy de marca (#0B2132) dominante en hero, pasos, fabricación y cier
 
 STORY: El visitante ve la cancha, entiende que es llave en mano (un solo responsable, todo incluido), ve que la fabrican de verdad, sabe plazos y garantía, resuelve dudas en el FAQ y escribe por WhatsApp.
 
-FIRST VIEWPORT: Desktop 1440: titular "CANCHAS DE PÁDEL LLAVE EN MANO" + acento "Full Panorámica, lista para jugar." + bajada + botón rojo "Quiero mi cancha" y secundario "Ver la cancha" a la izquierda; imagen ilustrativa de la cancha techada a la derecha; fila de 4 datos reales (24 h, 30–45 días hábiles, 2 años, unas 15 canchas del equipo). Mobile 390: el mismo orden apilado; botón flotante de WhatsApp siempre visible.
+FIRST VIEWPORT: Desktop 1440: titular "CANCHAS DE PÁDEL LLAVE EN MANO" + acento "Full Panorámica y Panorámica, listas para jugar." + bajada + botón rojo "Quiero mi cancha" y secundario "Ver la cancha" a la izquierda; imagen ilustrativa de la cancha techada a la derecha; fila de 4 datos reales (24 h, 30–45 días hábiles, 2 años, unas 15 canchas del equipo). Mobile 390: el mismo orden apilado; botón flotante de WhatsApp siempre visible.
 
 FORM: Estructura de la web anterior, mejor terminada. Sin firma interactiva: la interacción es el botón.
 

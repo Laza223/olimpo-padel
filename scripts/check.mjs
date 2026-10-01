@@ -32,9 +32,10 @@ for (const f of [...archivos(DIST), ...archivos('src')].filter(deTexto)) {
   if (m) falla(`identificador prohibido "${m[0]}" en ${f}`);
 }
 
-// 2 · afirmaciones que no se pueden hacer
+// 2 · afirmaciones que no se pueden hacer (plazos y garantías van en el presupuesto, por decisión de Lazar)
 const PROHIBIDO = [
   /certific/i, /homolog/i, /\bnormas?\b/i, /\bFIP\b/, /ensayad/i, /años de experiencia/i, /testimonio/i,
+  /garant/i, /30\s*[–-]\s*45/, /d[ií]as h[aá]biles/i, /\b[23] años/i, /15 canchas/i, /un solo modelo/i,
   /\bUSD\b/, /\$\s?\d/, /\blux\b/i, /resisten/i, /rentab/i, /financ/i, /más de 15/i, /provincias/i,
   /\b(córdoba|santa fe|mendoza|tucumán|salta|neuquén|río negro|san juan|chaco|corrientes|misiones|jujuy|chubut|san luis)\b/i,
 ];
@@ -43,39 +44,33 @@ for (const re of PROHIBIDO) {
   if (m) falla(`afirmación prohibida "${m[0]}" en el texto`);
 }
 
-// 3 · "15 canchas" siempre atribuido al equipo
-for (const m of texto.matchAll(/15 canchas/gi)) {
-  const ctx = texto.slice(Math.max(0, m.index - 60), m.index + 60);
-  if (!/equipo/i.test(ctx)) falla(`"15 canchas" sin "equipo": …${ctx}…`);
-}
-
-// 4 · todos los WhatsApp salen de site.config.js
+// 3 · todos los WhatsApp salen de site.config.js
 const num = isMissing(config.whatsapp) ? '' : String(config.whatsapp);
 const was = [...html.matchAll(/href="(https:\/\/wa\.me\/[^"]*)"/g)].map((m) => m[1]);
 if (was.length < 5) falla(`hay solo ${was.length} links de WhatsApp`);
 for (const u of was) if (!u.startsWith(`https://wa.me/${num}?text=`)) falla(`link de WhatsApp fuera de la config: ${u}`);
 
-// 5 · banda de pendientes mientras falten datos
+// 4 · banda de pendientes mientras falten datos
 const faltan = ['whatsapp', 'instagram', 'dominio', 'zona', 'cobertura'].filter((k) => isMissing(config[k]));
 if (faltan.length && !html.includes('banda-pendientes')) falla('faltan datos y no está la banda de pendientes');
 if (!faltan.length && html.includes('banda-pendientes')) falla('no faltan datos pero la banda sigue');
 
-// 6 · contenido clave en el HTML, sin JS
-for (const t of ['llave en mano', 'Full Panorámica', '30–45', '2 años', '3 años', '24 horas', 'No somos revendedores', 'techado']) {
+// 5 · contenido clave en el HTML, sin JS
+for (const t of ['llave en mano', 'Full Panorámica', 'Fabricamos dos modelos', '24 horas', 'No somos revendedores', 'techado']) {
   if (!texto.toLowerCase().includes(t.toLowerCase())) falla(`falta en el HTML: "${t}"`);
 }
 const preguntas = (html.match(/<details/g) ?? []).length;
 if (preguntas < 10) falla(`solo ${preguntas} preguntas frecuentes`);
 if (!html.includes('"FAQPage"')) falla('falta el JSON-LD de preguntas');
 
-// 7 · toda imagen ilustrativa (render de terceros) va rotulada en su bloque
+// 6 · toda imagen ilustrativa (render de terceros) va rotulada en su bloque
 const ILUSTRATIVAS = /\/media\/cancha-[a-z]+-\d+\.(jpg|webp|avif)/;
 for (const bloque of html.split(/<(?:figure|section)\b/)) {
   const img = bloque.match(ILUSTRATIVAS);
   if (img && !/Imagen ilustrativa/.test(bloque.split(/<\/(?:figure|section)>/)[0] + bloque)) falla(`imagen ilustrativa sin rótulo: ${img[0]}`);
 }
 
-// 8 · medios servidos sin ubicación, fecha de captura ni dispositivo
+// 7 · medios servidos sin ubicación, fecha de captura ni dispositivo
 const MEDIOS = archivos(join(DIST, 'media')).filter((f) => /\.(jpe?g|png|webp|avif|mp4|webm)$/i.test(f));
 for (const f of MEDIOS) {
   const bin = readFileSync(f).toString('latin1');
@@ -86,7 +81,7 @@ for (const f of MEDIOS) {
   }
 }
 
-// 9 · peso: carga inicial (HTML + CSS + JS) y medios
+// 8 · peso: carga inicial (HTML + CSS + JS) y medios
 const inicial = [join(DIST, 'index.html'), ...archivos(join(DIST, '_astro')).filter((f) => /\.(css|js)$/.test(f))];
 const gz = inicial.reduce((s, f) => s + gzipSync(readFileSync(f)).length, 0);
 if (gz > 120_000) falla(`carga inicial ${gz} B gz (> 120 KB)`);
@@ -96,7 +91,7 @@ for (const f of MEDIOS) {
   if (b > tope) falla(`${f} pesa ${b} B (> ${tope})`);
 }
 
-// 10 · procedencia embebida en todo raster publicado
+// 9 · procedencia embebida en todo raster publicado
 const scan = spawnSync(
   process.platform === 'win32' ? 'cmd' : 'sh',
   process.platform === 'win32'

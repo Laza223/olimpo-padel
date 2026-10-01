@@ -16,14 +16,14 @@ La landing corre en local (`pnpm run dev` → http://localhost:4321). Esto es lo
 
 ## Antes de publicar (bloqueante)
 
-0. **Marca de agua en una imagen.** La imagen de la cancha techada (`assets-fuente/renders-ia-elite/model-full-panoramica.webp`, usada en el hero, en la tarjeta de la cancha y en la imagen para compartir) tiene en la pared del fondo un texto tenue que parece la marca de agua de un banco de imágenes o de otra empresa. A tamaño web casi no se lee, pero está. No la borré: sacar una marca de agua de una imagen ajena no corresponde. Conviene reemplazar esa imagen (o confirmar de dónde salió y que se puede usar) antes de subir la página.
+0. **Imagen del hero y de la Full Panorámica.** Las dos fotos de los modelos (Full Panorámica y Panorámica) son las que me pasaste y salen rotuladas "Imagen ilustrativa". La de la Full tiene un cartel "PADEL CLUB" pintado en la pared del fondo. Antes de publicar conviene confirmar de dónde salen las dos y que se pueden usar. Las originales están en `assets-fuente/modelos/` (fuera del repo).
 
 ## Para confirmar
 
 4. **Permiso del socio del techado** para publicar las 3 fotos de su obra (y si quiere que lo nombremos). Hoy dicen "Fotos reales de una obra de techado de nuestro socio de estructuras".
-5. **Imágenes ilustrativas.** Por tu pedido se usan 3 renders de IA de la web anterior (hero y tarjeta de la cancha, pasos, cierre), todos con el rótulo "Imagen ilustrativa" y una nota en el pie. Son las mismas imágenes que ya vio mucha gente en la otra web; dos muestran canchas al aire libre (pasos y cierre), aunque vendemos solo techadas; la de instalación se sacó porque tenía un cartel de otra obra legible. **Cuando tengas la primera cancha Olimpo terminada, reemplazarlas es lo que más va a sumar.**
-6. **Garantía del siliconado.** Se publica "2 años en estructura, mano de obra, siliconado de vidrios e iluminación", como pediste. El pegado todavía está en validación: el riesgo comercial es tuyo.
-7. **Plazo.** "30–45 días hábiles de la confirmación al primer partido" incluye los días de espera antes de jugar. Validarlo en la primera obra.
+5. **Imágenes ilustrativas.** Las dos imágenes de los modelos son renders, y van rotuladas como tales. **Cuando tengas la primera cancha Olimpo terminada, reemplazarlas es lo que más va a sumar.**
+6. **Plazos y garantías.** Por pedido tuyo no figuran en la web: los plazos van en el presupuesto. La web tampoco menciona garantía ni "15 canchas". El juez (`scripts/check.mjs`) falla si vuelven a aparecer.
+7. **Datos de la Panorámica.** La web dice que es la misma cancha que la Full, con postes de acero en la estructura (así figura en `costos/`). Si tiene otras medidas, otro vidrio u otra iluminación, decímelo y lo ajusto. Tampoco dice si va techada o al aire libre.
 8. **Colores de césped** que ofrecen (la web no lo menciona; conviene saberlo para el presupuesto).
 
 ## Material que conviene sumar

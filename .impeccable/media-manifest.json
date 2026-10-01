@@ -243,147 +243,120 @@
     "provenance": "Foto real de obra de techado de un socio de estructuras. Recorte y compresion."
   },
   {
-    "file": "cancha-techada-800.avif",
+    "file": "cancha-full-640.avif",
     "kind": "foto real",
-    "width": 800,
-    "height": 600,
-    "bytes": 18492,
-    "source": "model-full-panoramica.webp",
+    "width": 640,
+    "height": 480,
+    "bytes": 16658,
+    "source": "full-panoramica.webp",
     "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
   },
   {
-    "file": "cancha-techada-800.webp",
+    "file": "cancha-full-640.webp",
     "kind": "foto real",
-    "width": 800,
-    "height": 600,
-    "bytes": 61994,
-    "source": "model-full-panoramica.webp",
+    "width": 640,
+    "height": 480,
+    "bytes": 46812,
+    "source": "full-panoramica.webp",
     "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
   },
   {
-    "file": "cancha-techada-800.jpg",
+    "file": "cancha-full-640.jpg",
     "kind": "foto real",
-    "width": 800,
-    "height": 600,
-    "bytes": 70436,
-    "source": "model-full-panoramica.webp",
+    "width": 640,
+    "height": 480,
+    "bytes": 57401,
+    "source": "full-panoramica.webp",
     "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
   },
   {
-    "file": "cancha-noche-640.avif",
+    "file": "cancha-full-1024.avif",
+    "kind": "foto real",
+    "width": 1024,
+    "height": 768,
+    "bytes": 37274,
+    "source": "full-panoramica.webp",
+    "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
+  },
+  {
+    "file": "cancha-full-1024.webp",
+    "kind": "foto real",
+    "width": 1024,
+    "height": 768,
+    "bytes": 104606,
+    "source": "full-panoramica.webp",
+    "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
+  },
+  {
+    "file": "cancha-full-1024.jpg",
+    "kind": "foto real",
+    "width": 1024,
+    "height": 768,
+    "bytes": 137813,
+    "source": "full-panoramica.webp",
+    "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
+  },
+  {
+    "file": "cancha-panoramica-640.avif",
     "kind": "foto real",
     "width": 640,
     "height": 640,
-    "bytes": 15818,
-    "source": "hero-court.webp",
+    "bytes": 24677,
+    "source": "panoramica.webp",
     "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
   },
   {
-    "file": "cancha-noche-640.webp",
+    "file": "cancha-panoramica-640.webp",
     "kind": "foto real",
     "width": 640,
     "height": 640,
-    "bytes": 39592,
-    "source": "hero-court.webp",
+    "bytes": 67032,
+    "source": "panoramica.webp",
     "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
   },
   {
-    "file": "cancha-noche-640.jpg",
+    "file": "cancha-panoramica-640.jpg",
     "kind": "foto real",
     "width": 640,
     "height": 640,
-    "bytes": 50856,
-    "source": "hero-court.webp",
+    "bytes": 80603,
+    "source": "panoramica.webp",
     "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
   },
   {
-    "file": "instalacion-640.avif",
-    "kind": "foto real",
-    "width": 640,
-    "height": 640,
-    "bytes": 34890,
-    "source": "project-3.webp",
-    "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
-  },
-  {
-    "file": "instalacion-640.webp",
-    "kind": "foto real",
-    "width": 640,
-    "height": 640,
-    "bytes": 61674,
-    "source": "project-3.webp",
-    "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
-  },
-  {
-    "file": "instalacion-640.jpg",
-    "kind": "foto real",
-    "width": 640,
-    "height": 640,
-    "bytes": 78228,
-    "source": "project-3.webp",
-    "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
-  },
-  {
-    "file": "cancha-atardecer-640.avif",
-    "kind": "foto real",
-    "width": 640,
-    "height": 640,
-    "bytes": 14029,
-    "source": "hero-court-new.png",
-    "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
-  },
-  {
-    "file": "cancha-atardecer-640.webp",
-    "kind": "foto real",
-    "width": 640,
-    "height": 640,
-    "bytes": 33176,
-    "source": "hero-court-new.png",
-    "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
-  },
-  {
-    "file": "cancha-atardecer-640.jpg",
-    "kind": "foto real",
-    "width": 640,
-    "height": 640,
-    "bytes": 47525,
-    "source": "hero-court-new.png",
-    "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
-  },
-  {
-    "file": "cancha-atardecer-1024.avif",
+    "file": "cancha-panoramica-1024.avif",
     "kind": "foto real",
     "width": 1024,
     "height": 1024,
-    "bytes": 28902,
-    "source": "hero-court-new.png",
+    "bytes": 62399,
+    "source": "panoramica.webp",
     "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
   },
   {
-    "file": "cancha-atardecer-1024.webp",
+    "file": "cancha-panoramica-1024.webp",
     "kind": "foto real",
     "width": 1024,
     "height": 1024,
-    "bytes": 75248,
-    "source": "hero-court-new.png",
+    "bytes": 159644,
+    "source": "panoramica.webp",
     "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
   },
   {
-    "file": "cancha-atardecer-1024.jpg",
+    "file": "cancha-panoramica-1024.jpg",
     "kind": "foto real",
     "width": 1024,
     "height": 1024,
-    "bytes": 108184,
-    "source": "hero-court-new.png",
+    "bytes": 208270,
+    "source": "panoramica.webp",
     "provenance": "Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado."
   },
   {
     "file": "og.jpg",
     "kind": "og",
-    "width": 1200,
-    "height": 630,
-    "bytes": 103119,
-    "source": "model-full-panoramica.webp",
+    "width": 1024,
+    "height": 538,
+    "bytes": 115352,
+    "source": "full-panoramica.webp",
     "provenance": "Recorte de un render ilustrativo con el logo encima."
   }
 ]

@@ -11,43 +11,43 @@ export interface Pregunta {
 export const FAQ: Pregunta[] = [
   {
     q: '¿Cuánto cuesta una cancha de pádel en Argentina?',
-    a: `<p>Depende de cuántas canchas son, del vidrio que elijas, de la distancia y de si necesitás platea o techado. Escribinos por WhatsApp y en 24 horas te mandamos el presupuesto, con la cancha, la logística y la instalación por separado.</p>`,
+    a: `<p>Depende de cuántas canchas son, del modelo, de la distancia y de si necesitás platea o techado. Escribinos por WhatsApp y en 24 horas te mandamos el presupuesto detallado, con especificaciones técnicas, tiempos y formas de pago.</p>`,
   },
   {
     q: '¿Qué incluye el llave en mano?',
-    a: `<p>Todo lo que necesitás para jugar: estructura de acero, 18 vidrios templados, malla, césped sintético con arena, red, iluminación LED, el traslado y la instalación. Aparte, solo si hacen falta, se cotizan la platea de hormigón y el techado.</p>`,
+    a: `<p>Todo lo que necesitás para jugar: estructura de acero, vidrios templados, malla, césped sintético premium con arena de sílice, red, iluminación LED, el traslado y la instalación. Aparte, solo si hacen falta, se cotizan la platea de hormigón y el techado.</p>`,
   },
   {
-    q: '¿Cuánto tarda, desde que confirmo hasta jugar?',
-    a: `<p>Entre 30 y 45 días hábiles desde que confirmás. Ese plazo incluye la fabricación, la instalación y la espera antes del primer partido.</p>`,
+    q: '¿Cuánto tarda?',
+    a: `<p>Los plazos dependen de la demanda y de cada obra, por eso los detallamos en el presupuesto, que te mandamos en 24 horas.</p>`,
   },
   {
     q: '¿Qué necesito tener para instalar la cancha?',
-    a: `<p>Un espacio techado con piso de hormigón nivelado, acceso para un camión y electricidad en la obra. Si no tenés la platea o el techo, te los cotizamos aparte.</p>`,
+    a: `<p>Un piso de hormigón nivelado (platea), acceso para un camión y electricidad en la obra. Si no tenés la platea o el techo, te los cotizamos aparte.</p>`,
   },
   {
     q: '¿Qué medidas tiene una cancha de pádel reglamentaria?',
-    a: `<p>El área de juego mide 20 × 10 metros, 200 m². Contanos las medidas de tu galpón y te decimos si entra.</p>`,
+    a: `<p>El área de juego mide 20 × 10 metros, 200 m². Contanos las medidas de tu espacio y te decimos si entra.</p>`,
   },
   {
     q: '¿Qué es una cancha Full Panorámica?',
     a: `<p>Es la cancha sin postes en las esquinas: el vidrio de los fondos se une directo con el de los costados y nada tapa la vista del juego. En la nuestra, además, los vidrios van sin agujeros ni tornillos a la vista.</p>`,
   },
   {
-    q: '¿Por qué solo para espacios techados?',
-    a: `<p>Porque la Full Panorámica que fabricamos está pensada para trabajar bajo techo. Si tenés el terreno pero no el galpón, también hacemos el techado.</p>`,
+    q: '¿Qué diferencia hay entre la Full Panorámica y la Panorámica?',
+    a: `<p>La Full Panorámica no tiene postes en las esquinas y está pensada para espacios techados. La Panorámica es la misma cancha, con postes de acero en la estructura. Contanos tu espacio y te asesoramos cuál te conviene.</p>`,
   },
   {
-    q: '¿Vidrio de 10 o de 12 mm?',
-    a: `<p>El estándar es vidrio templado de 10 mm. Si preferís 12 mm, se puede, con un costo adicional que te pasamos en el presupuesto.</p>`,
+    q: '¿Necesito un galpón o un techo?',
+    a: `<p>La Full Panorámica está pensada para trabajar bajo techo. Si tenés el terreno pero no el galpón, también hacemos el techado. Para la Panorámica, escribinos y te decimos qué conviene según tu espacio.</p>`,
   },
   {
-    q: '¿Qué garantía tiene?',
-    a: `<p>2 años en estructura, mano de obra, siliconado de vidrios e iluminación, y 3 años en el césped. Cada 6 meses hacemos una revisión técnica. No cubre granizo, inundación, vientos extraordinarios ni rotura de vidrio por impacto.</p>`,
+    q: '¿Qué espesor tiene el vidrio?',
+    a: `<p>Usamos vidrio templado de 12 mm.</p>`,
   },
   {
     q: '¿Ustedes fabrican las canchas?',
-    a: `<p>Sí. La estructura de acero y los paños de malla los fabricamos nosotros, y la instalación la hace nuestro equipo. No somos revendedores.</p>`,
+    a: `<p>Sí. Fabricamos canchas de pádel a medida y las instalamos con nuestro equipo. No somos revendedores.</p>`,
   },
   {
     q: '¿Hacen el techado?',
@@ -55,7 +55,7 @@ export const FAQ: Pregunta[] = [
   },
   {
     q: '¿Qué mantenimiento lleva?',
-    a: `<p>Poco: cepillar el césped cada 15 días, reponer arena cada 6 meses y limpiar los vidrios solo con agua y un trapo. Además, cada 6 meses hacemos una revisión técnica.</p>`,
+    a: `<p>Poco: cepillar el césped cada 15 días, reponer arena cada 6 meses y limpiar los vidrios solo con agua y un trapo.</p>`,
   },
   {
     q: '¿Dónde instalan?',
