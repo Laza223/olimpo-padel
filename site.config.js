@@ -17,7 +17,7 @@ export default {
 
   // Dominio con https, sin barra final. Se usa para la URL canónica,
   // la imagen al compartir, robots.txt y sitemap.xml.
-  dominio: 'COMPLETAR',
+  dominio: 'https://olimpo-padel.vercel.app',
 
   // Dónde fabricamos. Solo Buenos Aires por ahora, sin localidad. Se muestra en el pie.
   zona: 'Buenos Aires, Argentina',
