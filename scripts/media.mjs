@@ -269,12 +269,6 @@ function main() {
     provenance: techadoProvenance,
   });
   makePhotoSet({
-    slug: 'techado-interior',
-    srcPath: path.join(TECHADO_DIR, 'WhatsApp Image 2026-07-27 at 3.49.14 PM.jpeg'),
-    source: 'WhatsApp Image 2026-07-27 at 3.49.14 PM.jpeg',
-    provenance: techadoProvenance,
-  });
-  makePhotoSet({
     slug: 'techado-estructura',
     srcPath: path.join(TECHADO_DIR, 'WhatsApp Image 2026-07-27 at 3.49.12 PM (1).jpeg'),
     source: 'WhatsApp Image 2026-07-27 at 3.49.12 PM (1).jpeg',

@@ -817,16 +817,12 @@ mark.pendiente {
 .fotos {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  grid-template-rows: 1fr 1fr;
   gap: 0.75rem;
   aspect-ratio: 5 / 4;
 }
 .fotos figure {
   border-radius: var(--r);
   overflow: hidden;
-}
-.fotos figure:first-child {
-  grid-row: span 2;
 }
 .fotos img {
   width: 100%;
