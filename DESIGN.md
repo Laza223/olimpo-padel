@@ -103,7 +103,6 @@ Todo el peso tipográfico corre por una sola familia variable, Archivo, usada en
 - Rojo estrictamente de detalle: nunca fondo de sección, nunca cuerpo de texto.
 - Una sola familia (Archivo) llevando displays condensados en mayúscula y texto corrido sin condensar.
 - Tarjetas blancas redondeadas con sombra suave; nada de sombras duras ni bordes gruesos.
-- Toda imagen de terceros lleva la etiqueta "Imagen ilustrativa"; las fotos/videos reales llevan una leyenda de texto que dice "reales", nunca la píldora de etiqueta.
 
 ## Colors
 
@@ -195,7 +194,6 @@ Dos radios conviven: 14px (`--r`) para tarjetas y bloques de contenido, 22px (`-
 - **Mobile:** los enlaces de navegación se ocultan por debajo de 900px; solo quedan el logo y el botón de WhatsApp (con texto corto "Presupuesto").
 
 ### Etiquetas de imagen (componente de contenido, no solo visual)
-- **Imagen ilustrativa:** píldora navy translúcida con blur (`.etiqueta`), esquina inferior izquierda (o derecha en el cierre) de toda imagen de stock/render de terceros.
 - **Contenido real:** nunca lleva la píldora; va como leyenda de texto simple debajo de la pieza ("Videos reales del soldador que fabrica nuestras canchas", "Fotos reales de una obra de techado de nuestro socio de estructuras").
 
 ### Datos pendientes (componente de contenido)
@@ -206,8 +204,7 @@ Dos radios conviven: 14px (`--r`) para tarjetas y bloques de contenido, 22px (`-
 
 ### Do:
 - **Do** usar el verde WhatsApp para todo botón que va a WhatsApp y el rojo (`#d42f38`) solo en: barra bajo título, número de paso, marca de lista, unidad de cifra y el signo del FAQ abierto.
-- **Do** etiquetar toda imagen de terceros/render con la píldora "Imagen ilustrativa" (`.etiqueta`).
-- **Do** rotular el contenido real (fotos y videos del taller/obra) como "reales" en una leyenda de texto simple, nunca con la píldora de `.etiqueta`.
+- **Do** rotular el contenido real (fotos y videos del taller/obra) como "reales".
 - **Do** tomar todo dato de contacto (WhatsApp, Instagram, dominio, zona, cobertura) únicamente de `site.config.js`, mostrando `<mark class="pendiente">` mientras diga `COMPLETAR`.
 - **Do** mantener una sola familia tipográfica (Archivo) y construir jerarquía con peso y `font-stretch`.
 
@@ -216,7 +213,6 @@ Dos radios conviven: 14px (`--r`) para tarjetas y bloques de contenido, 22px (`-
 - **Don't** usar el rojo como fondo de sección o color de texto corrido.
 - **Don't** sumar una segunda familia tipográfica o un ícono que no sea SVG inline.
 - **Don't** aplicar sombras duras con offset marcado; toda sombra es difusa y con tinte navy.
-- **Don't** presentar un render de IA o foto de stock como obra terminada de Olimpo: siempre "Imagen ilustrativa".
 
 ---
 

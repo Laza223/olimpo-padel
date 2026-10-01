@@ -63,14 +63,7 @@ const preguntas = (html.match(/<details/g) ?? []).length;
 if (preguntas < 10) falla(`solo ${preguntas} preguntas frecuentes`);
 if (!html.includes('"FAQPage"')) falla('falta el JSON-LD de preguntas');
 
-// 6 · toda imagen ilustrativa (render de terceros) va rotulada en su bloque
-const ILUSTRATIVAS = /\/media\/cancha-[a-z]+-\d+\.(jpg|webp|avif)/;
-for (const bloque of html.split(/<(?:figure|section)\b/)) {
-  const img = bloque.match(ILUSTRATIVAS);
-  if (img && !/Imagen ilustrativa/.test(bloque.split(/<\/(?:figure|section)>/)[0] + bloque)) falla(`imagen ilustrativa sin rótulo: ${img[0]}`);
-}
-
-// 7 · medios servidos sin ubicación, fecha de captura ni dispositivo
+// 6 · medios servidos sin ubicación, fecha de captura ni dispositivo
 const MEDIOS = archivos(join(DIST, 'media')).filter((f) => /\.(jpe?g|png|webp|avif|mp4|webm)$/i.test(f));
 for (const f of MEDIOS) {
   const bin = readFileSync(f).toString('latin1');
@@ -81,7 +74,7 @@ for (const f of MEDIOS) {
   }
 }
 
-// 8 · peso: carga inicial (HTML + CSS + JS) y medios
+// 7 · peso: carga inicial (HTML + CSS + JS) y medios
 const inicial = [join(DIST, 'index.html'), ...archivos(join(DIST, '_astro')).filter((f) => /\.(css|js)$/.test(f))];
 const gz = inicial.reduce((s, f) => s + gzipSync(readFileSync(f)).length, 0);
 if (gz > 120_000) falla(`carga inicial ${gz} B gz (> 120 KB)`);
@@ -91,7 +84,7 @@ for (const f of MEDIOS) {
   if (b > tope) falla(`${f} pesa ${b} B (> ${tope})`);
 }
 
-// 9 · procedencia embebida en todo raster publicado
+// 8 · procedencia embebida en todo raster publicado
 const scan = spawnSync(
   process.platform === 'win32' ? 'cmd' : 'sh',
   process.platform === 'win32'

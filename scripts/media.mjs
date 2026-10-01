@@ -276,8 +276,8 @@ function main() {
   });
 
 
-  // Renders de IA de terceros: en la página van rotulados "Imagen ilustrativa", nunca como obra propia.
-  const ilustrativa = 'Render de IA de terceros; se muestra rotulado como Imagen ilustrativa. Recodificado y redimensionado.';
+  // Renders de IA de terceros: son los modelos que muestra la web.
+  const ilustrativa = 'Render de IA de terceros; Recodificado y redimensionado.';
   for (const [slug, archivo, widths] of [
     ['cancha-full', 'full-panoramica.webp', [640, 1024]],
     ['cancha-panoramica', 'panoramica.webp', [640, 1024]],
