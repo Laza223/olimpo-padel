@@ -20,18 +20,25 @@ test('las entidades identifican a Olimpo con el dominio publicado', () => {
   assert.equal(org.logo, 'https://www.olimpopadel.com/media/logo-navy.png');
 });
 
-test('la oferta visible y el producto publican el precio de la cancha Full, sin aplicarlo a la Panorámica', () => {
+test('la oferta visible y los productos publican el precio de la cancha Full y de la Panorámica', () => {
   const full = html.match(/<article[^>]*data-model="full_panoramica"[\s\S]*?<\/article>/)?.[0];
   const pano = html.match(/<article[^>]*data-model="panoramica"[\s\S]*?<\/article>/)?.[0];
   assert.ok(full?.includes('19.900'), 'la ficha Full debe mostrar USD 19.900');
   assert.ok(full?.includes('21.900'), 'la ficha Full debe mostrar el precio anterior');
-  assert.ok(pano && !pano.includes('19.900'), 'la Panorámica conserva su consulta de precio');
+  assert.ok(pano?.includes('20.900'), 'la ficha Panorámica debe mostrar USD 20.900');
+  assert.ok(pano && !pano.includes('19.900'), 'la Panorámica no debe mostrar el precio de la Full');
   const product = graph.find(entry => entry['@type'] === 'Product');
   assert.equal(product?.offers.price, 19900);
   assert.equal(product?.offers.priceCurrency, 'USD');
   assert.equal(product?.offers.description, 'Precio de la cancha Full Panorámica.');
   assert.equal(product?.offers.priceValidUntil, undefined);
   assert.equal(product?.offers.availability, undefined);
+
+  const products = graph.filter(entry => entry['@type'] === 'Product');
+  const panoProduct = products.find(p => p['@id']?.includes('panoramica') && !p['@id']?.includes('full'));
+  assert.ok(panoProduct, 'debe existir la entidad de Producto para la Panorámica');
+  assert.equal(panoProduct?.offers.price, 20900);
+  assert.equal(panoProduct?.offers.priceCurrency, 'USD');
 });
 
 test('el contenido y las respuestas para buscadores omiten el espesor y la promesa de todo incluido', () => {

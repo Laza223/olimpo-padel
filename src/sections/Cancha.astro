@@ -2,6 +2,7 @@
 import BotonWa from '../components/BotonWa.astro';
 import Foto from '../components/Foto.astro';
 import OfertaFull from '../components/OfertaFull.astro';
+import PrecioPanoramica from '../components/PrecioPanoramica.astro';
 import { MSG } from '../lib/site';
 
 const modelos = [
@@ -76,6 +77,7 @@ const modelos = [
                 ))}
               </ul>
               {m.model === 'full_panoramica' && <OfertaFull />}
+              {m.model === 'panoramica' && <PrecioPanoramica />}
               <BotonWa texto={m.texto} data-wa-model={m.model} class="btn btn--wa btn--grande btn--ancho">Pedí tu presupuesto</BotonWa>
             </div>
           </article>

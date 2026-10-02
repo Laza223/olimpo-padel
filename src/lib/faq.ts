@@ -1,7 +1,7 @@
 // Preguntas frecuentes. Una sola fuente para el HTML y el JSON-LD (FAQPage).
 // Nivel comprador: qué recibe, cuánto tarda, qué necesita. Sin detalles de fabricación.
 // La respuesta de cobertura sale de site.config.js (dato: 'cobertura').
-import { fullOffer, formatUSD } from '../../site.config.js';
+import { fullOffer, panoramicaOffer, formatUSD } from '../../site.config.js';
 
 export interface Pregunta {
   q: string;
@@ -12,7 +12,7 @@ export interface Pregunta {
 export const FAQ: Pregunta[] = [
   {
     q: '¿Cuánto cuesta una cancha de pádel en Argentina?',
-    a: `<p>La cancha Full Panorámica está en oferta a ${formatUSD(fullOffer.price)}, antes ${formatUSD(fullOffer.previousPrice)}. Es el precio de la cancha para espacios techados. Para la Panorámica y el detalle de tu proyecto, escribinos por WhatsApp: en 24 horas te mandamos el presupuesto con especificaciones técnicas, tiempos y formas de pago.</p>`,
+    a: `<p>La cancha Full Panorámica está en oferta a ${formatUSD(fullOffer.price)}, antes ${formatUSD(fullOffer.previousPrice)} (para espacios techados). La cancha Panorámica está a ${formatUSD(panoramicaOffer.price)}. Para el detalle de tu proyecto, escribinos por WhatsApp: en 24 horas te mandamos el presupuesto con especificaciones técnicas, tiempos y formas de pago.</p>`,
   },
   {
     q: '¿Qué trae la cancha?',

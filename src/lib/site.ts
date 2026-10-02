@@ -90,5 +90,17 @@ export function jsonLd(): object[] {
       description: 'Precio de la cancha Full Panorámica.', seller: { '@id': org['@id'] },
     },
   };
-  return [org, website, product, faq];
+  const productPanoramica = {
+    '@context': 'https://schema.org', '@type': 'Product',
+    '@id': `${config.dominio}/#panoramica`, name: 'Cancha de pádel Panorámica Olimpo',
+    description: 'Cancha de pádel de 20 × 10 m con postes de acero en la estructura.',
+    image: `${config.dominio}/media/cancha-panoramica-1024.webp`,
+    brand: { '@type': 'Brand', name: 'Olimpo Padel' }, manufacturer: { '@id': org['@id'] },
+    offers: {
+      '@type': 'Offer', url: `${config.dominio}/#cancha`,
+      price: config.panoramicaOffer.price, priceCurrency: config.panoramicaOffer.currency,
+      description: 'Precio de la cancha Panorámica.', seller: { '@id': org['@id'] },
+    },
+  };
+  return [org, website, product, productPanoramica, faq];
 }

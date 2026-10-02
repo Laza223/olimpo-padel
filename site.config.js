@@ -7,12 +7,14 @@
 //  correr `pnpm run build`.
 // ─────────────────────────────────────────────────────────────
 
-// Oferta autorizada por Lazar. Precio de la cancha, sin fecha límite definida.
+// Precios autorizados por Lazar. Precio de la cancha, sin fecha límite definida.
 export const fullOffer = { price: 19900, previousPrice: 21900, currency: 'USD' };
+export const panoramicaOffer = { price: 20900, currency: 'USD' };
 export const formatUSD = (price) => `USD ${Number(price).toLocaleString('es-AR')}`;
 
 export default {
   fullOffer,
+  panoramicaOffer,
   // WhatsApp que recibe los pedidos. Solo dígitos, formato internacional
   // de Argentina: 549 + característica sin el 0 + número sin el 15.
   whatsapp: '5492323610592',

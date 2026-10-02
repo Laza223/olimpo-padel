@@ -43,9 +43,9 @@ for (const re of PROHIBIDO) {
   const m = texto.match(re);
   if (m) falla(`afirmación prohibida "${m[0]}" en el texto`);
 }
-// Lazar autorizó exclusivamente la oferta Full Panorámica de USD 21.900 a USD 19.900.
+// Lazar autorizó los precios: Full Panorámica (USD 21.900 a USD 19.900) y Panorámica (USD 20.900).
 for (const price of texto.matchAll(/(?:USD\s*|\$\s*)(\d+(?:[.,]\d+)*)/g)) {
-  if (!['21.900', '19.900'].includes(price[1])) falla(`precio sin autorización: ${price[0]}`);
+  if (!['21.900', '19.900', '20.900'].includes(price[1])) falla(`precio sin autorización: ${price[0]}`);
 }
 
 // 3 · todos los WhatsApp salen de site.config.js

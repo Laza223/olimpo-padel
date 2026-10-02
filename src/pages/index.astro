@@ -8,11 +8,11 @@ import Fabrica from '../sections/Fabrica.astro';
 import Techado from '../sections/Techado.astro';
 import Preguntas from '../sections/Preguntas.astro';
 import Cierre from '../sections/Cierre.astro';
-import { fullOffer, formatUSD } from '../../site.config.js';
+import { fullOffer, panoramicaOffer, formatUSD } from '../../site.config.js';
 ---
 <Base
   title="Canchas de pádel en Argentina | Olimpo Padel"
-  description={`Fabricamos canchas Full Panorámica y Panorámica. Full Panorámica a ${formatUSD(fullOffer.price)}, antes ${formatUSD(fullOffer.previousPrice)}. Pedí tu presupuesto detallado por WhatsApp.`}
+  description={`Fabricamos canchas Full Panorámica (${formatUSD(fullOffer.price)}) y Panorámica (${formatUSD(panoramicaOffer.price)}). Pedí tu presupuesto detallado por WhatsApp.`}
 >
   <Hero />
   <Cancha />
