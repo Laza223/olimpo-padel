@@ -8,10 +8,11 @@ import Fabrica from '../sections/Fabrica.astro';
 import Techado from '../sections/Techado.astro';
 import Preguntas from '../sections/Preguntas.astro';
 import Cierre from '../sections/Cierre.astro';
+import { fullOffer, formatUSD } from '../../site.config.js';
 ---
 <Base
-  title="Olimpo Padel · Canchas de pádel llave en mano | Full Panorámica y Panorámica"
-  description="Fabricamos, llevamos e instalamos canchas de pádel Full Panorámica y Panorámica, llave en mano. También hacemos el techado. Pedí tu presupuesto por WhatsApp: te respondemos en 24 horas."
+  title="Canchas de pádel en Argentina | Olimpo Padel"
+  description={`Fabricamos canchas Full Panorámica y Panorámica. Full Panorámica a ${formatUSD(fullOffer.price)}, antes ${formatUSD(fullOffer.previousPrice)}. Pedí tu presupuesto detallado por WhatsApp.`}
 >
   <Hero />
   <Cancha />

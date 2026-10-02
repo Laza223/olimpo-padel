@@ -8,4 +8,4 @@ interface Props {
 }
 const { texto, class: cls = 'btn btn--wa', ...rest } = Astro.props;
 ---
-<a class={cls} href={waHref(texto)} target="_blank" rel="noopener" {...rest}><IconoWa /><slot /></a>
+<a class={cls} href={waHref(texto)} target="_blank" rel="noopener" data-whatsapp {...rest}><IconoWa /><slot /></a>

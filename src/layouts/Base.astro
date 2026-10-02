@@ -11,6 +11,7 @@ interface Props {
 }
 const { title, description } = Astro.props;
 const dominio = isMissing(site.dominio) ? null : site.dominio;
+const canonical = dominio ? new URL(Astro.url.pathname, `${dominio}/`).href : null;
 ---
 
 <!doctype html>
@@ -24,17 +25,14 @@ const dominio = isMissing(site.dominio) ? null : site.dominio;
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_AR" />
     <meta property="og:site_name" content="Olimpo Padel" />
-    <meta property="og:title" content="Olimpo Padel · Canchas de pádel llave en mano" />
-    <meta
-      property="og:description"
-      content="Fabricamos e instalamos canchas de pádel Full Panorámica y Panorámica. Presupuesto por WhatsApp en 24 horas."
-    />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
     <meta name="twitter:card" content="summary_large_image" />
     {
       dominio && (
         <>
-          <link rel="canonical" href={`${dominio}/`} />
-          <meta property="og:url" content={`${dominio}/`} />
+          <link rel="canonical" href={canonical} />
+          <meta property="og:url" content={canonical} />
           <meta property="og:image" content={`${dominio}/media/og.jpg`} />
           <meta name="twitter:image" content={`${dominio}/media/og.jpg`} />
         </>
@@ -44,6 +42,26 @@ const dominio = isMissing(site.dominio) ? null : site.dominio;
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="preload" href="/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin />
     {jsonLd().map((o) => <script type="application/ld+json" set:html={JSON.stringify(o)} />)}
+    {site.ga4 && dominio && (
+      <script data-ga4 define:vars={{ measurementId: site.ga4, productionHost: new URL(dominio).hostname, canonical }}>
+        // Los previews y el desarrollo no mandan visitas a la propiedad real.
+        if (location.hostname === productionHost) {
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = function () { window.dataLayer.push(arguments); };
+          window.gtag('js', new Date());
+          let referrer = '';
+          try { if (document.referrer) referrer = new URL(document.referrer).origin; } catch {}
+          window.gtag('config', measurementId, {
+            page_location: canonical, page_referrer: referrer,
+            allow_google_signals: false, allow_ad_personalization_signals: false,
+          });
+          const tag = document.createElement('script');
+          tag.async = true;
+          tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + measurementId;
+          document.head.appendChild(tag);
+        }
+      </script>
+    )}
   </head>
   <body>
     {
@@ -79,7 +97,7 @@ const dominio = isMissing(site.dominio) ? null : site.dominio;
 
     <Pie />
 
-    <a class="wa-flotante" href={waHref(MSG.base)} target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+    <a class="wa-flotante" href={waHref(MSG.base)} target="_blank" rel="noopener" data-whatsapp aria-label="Escribinos por WhatsApp">
       <IconoWa />
     </a>
   </body>

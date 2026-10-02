@@ -24,6 +24,9 @@ if (!isMissing(config.dominio) && !/^https:\/\/[^/\s]+$/.test(String(config.domi
 }
 
 export const site = config;
+if (config.ga4 && !/^G-[A-Z0-9]+$/.test(config.ga4)) {
+  throw new Error('site.config.js: ga4 tiene que ser un ID de medición G- válido o quedar vacío.');
+}
 export const faltan = (Object.keys(LABELS) as CampoPendiente[]).filter((k) => isMissing(config[k]));
 
 /** Link de WhatsApp. Sin número cargado, wa.me/?text= abre el selector de contactos. */
@@ -52,6 +55,7 @@ export function jsonLd(): object[] {
       'Fabricamos e instalamos canchas de pádel Full Panorámica y Panorámica llave en mano, y hacemos el techado.',
   };
   if (!isMissing(config.dominio)) {
+    org['@id'] = `${config.dominio}/#organization`;
     org.url = `${config.dominio}/`;
     org.logo = `${config.dominio}/media/logo-navy.png`;
   }
@@ -68,5 +72,23 @@ export function jsonLd(): object[] {
       acceptedAnswer: { '@type': 'Answer', text: f.dato === 'cobertura' ? String(config.cobertura) : strip(f.a) },
     })),
   };
-  return [org, faq];
+  if (isMissing(config.dominio)) return [org, faq];
+  const website = {
+    '@context': 'https://schema.org', '@type': 'WebSite',
+    '@id': `${config.dominio}/#website`, url: `${config.dominio}/`,
+    name: 'Olimpo Padel', inLanguage: 'es-AR', publisher: { '@id': org['@id'] },
+  };
+  const product = {
+    '@context': 'https://schema.org', '@type': 'Product',
+    '@id': `${config.dominio}/#full-panoramica`, name: 'Cancha de pádel Full Panorámica Olimpo',
+    description: 'Cancha de pádel de 20 × 10 m, sin postes en las esquinas, para espacios techados.',
+    image: `${config.dominio}/media/cancha-full-1024.webp`,
+    brand: { '@type': 'Brand', name: 'Olimpo Padel' }, manufacturer: { '@id': org['@id'] },
+    offers: {
+      '@type': 'Offer', url: `${config.dominio}/#cancha`,
+      price: config.fullOffer.price, priceCurrency: config.fullOffer.currency,
+      description: 'Precio de la cancha Full Panorámica.', seller: { '@id': org['@id'] },
+    },
+  };
+  return [org, website, product, faq];
 }

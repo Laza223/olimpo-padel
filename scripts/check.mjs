@@ -36,12 +36,16 @@ for (const f of [...archivos(DIST), ...archivos('src')].filter(deTexto)) {
 const PROHIBIDO = [
   /certific/i, /homolog/i, /\bnormas?\b/i, /\bFIP\b/, /ensayad/i, /años de experiencia/i, /testimonio/i,
   /garant/i, /30\s*[–-]\s*45/, /d[ií]as h[aá]biles/i, /\b[23] años/i, /15 canchas/i, /un solo modelo/i,
-  /\bUSD\b/, /\$\s?\d/, /\blux\b/i, /resisten/i, /rentab/i, /financ/i, /más de 15/i, /provincias/i,
+  /\blux\b/i, /resisten/i, /rentab/i, /financ/i, /más de 15/i, /provincias/i,
   /\b(córdoba|santa fe|mendoza|tucumán|salta|neuquén|río negro|san juan|chaco|corrientes|misiones|jujuy|chubut|san luis)\b/i,
 ];
 for (const re of PROHIBIDO) {
   const m = texto.match(re);
   if (m) falla(`afirmación prohibida "${m[0]}" en el texto`);
+}
+// Lazar autorizó exclusivamente la oferta Full Panorámica de USD 21.900 a USD 19.900.
+for (const price of texto.matchAll(/(?:USD\s*|\$\s*)(\d+(?:[.,]\d+)*)/g)) {
+  if (!['21.900', '19.900'].includes(price[1])) falla(`precio sin autorización: ${price[0]}`);
 }
 
 // 3 · todos los WhatsApp salen de site.config.js

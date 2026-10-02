@@ -1,0 +1,11 @@
+---
+import { fullOffer, formatUSD } from '../../site.config.js';
+---
+<div class="oferta-full">
+  <p class="oferta-full__modelo">Oferta Full Panorámica</p>
+  <p class="oferta-full__precios">
+    <span class="oferta-full__antes">Antes <s>{formatUSD(fullOffer.previousPrice)}</s></span>
+    <strong>{formatUSD(fullOffer.price)}</strong>
+  </p>
+  <p class="oferta-full__alcance">Precio de la cancha · Para espacios techados</p>
+</div>

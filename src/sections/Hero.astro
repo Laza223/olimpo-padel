@@ -1,6 +1,7 @@
 ---
 import BotonWa from '../components/BotonWa.astro';
 import Foto from '../components/Foto.astro';
+import OfertaFull from '../components/OfertaFull.astro';
 import { MSG } from '../lib/site';
 ---
 <section class="hero" id="inicio" aria-labelledby="hero-titulo">
@@ -14,6 +15,7 @@ import { MSG } from '../lib/site';
         <p class="hero__bajada">
           Fabricamos, llevamos e instalamos tu cancha de pádel. Vos elegís dónde va; del resto nos encargamos nosotros.
         </p>
+        <OfertaFull />
         <div class="hero__ctas">
           <BotonWa texto={MSG.base} class="btn btn--wa btn--grande">Quiero mi cancha</BotonWa>
           <a class="btn btn--linea btn--grande" href="#cancha">Ver la cancha</a>

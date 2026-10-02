@@ -1,6 +1,7 @@
 // Preguntas frecuentes. Una sola fuente para el HTML y el JSON-LD (FAQPage).
 // Nivel comprador: qué recibe, cuánto tarda, qué necesita. Sin detalles de fabricación.
 // La respuesta de cobertura sale de site.config.js (dato: 'cobertura').
+import { fullOffer, formatUSD } from '../../site.config.js';
 
 export interface Pregunta {
   q: string;
@@ -11,11 +12,11 @@ export interface Pregunta {
 export const FAQ: Pregunta[] = [
   {
     q: '¿Cuánto cuesta una cancha de pádel en Argentina?',
-    a: `<p>Depende de cuántas canchas son, del modelo, de la distancia y de si necesitás platea o techado. Escribinos por WhatsApp y en 24 horas te mandamos el presupuesto detallado, con especificaciones técnicas, tiempos y formas de pago.</p>`,
+    a: `<p>La cancha Full Panorámica está en oferta a ${formatUSD(fullOffer.price)}, antes ${formatUSD(fullOffer.previousPrice)}. Es el precio de la cancha para espacios techados. Para la Panorámica y el detalle de tu proyecto, escribinos por WhatsApp: en 24 horas te mandamos el presupuesto con especificaciones técnicas, tiempos y formas de pago.</p>`,
   },
   {
-    q: '¿Qué incluye el llave en mano?',
-    a: `<p>Todo lo que necesitás para jugar: estructura de acero, vidrios templados, malla, césped sintético premium con arena de sílice, red, iluminación LED, el traslado y la instalación. Aparte, solo si hacen falta, se cotizan la platea de hormigón y el techado.</p>`,
+    q: '¿Qué trae la cancha?',
+    a: `<p>Estructura de acero, vidrios templados, malla, césped sintético premium con arena de sílice, red e iluminación LED. Te mandamos las especificaciones y el detalle de tu proyecto en el presupuesto.</p>`,
   },
   {
     q: '¿Cuánto tarda?',
@@ -42,8 +43,8 @@ export const FAQ: Pregunta[] = [
     a: `<p>La Full Panorámica está pensada para trabajar bajo techo. Si tenés el terreno pero no el galpón, también hacemos el techado. Para la Panorámica, escribinos y te decimos qué conviene según tu espacio.</p>`,
   },
   {
-    q: '¿Qué espesor tiene el vidrio?',
-    a: `<p>Usamos vidrio templado de 12 mm.</p>`,
+    q: '¿Qué tipo de vidrio usan?',
+    a: `<p>Usamos vidrio templado. Definimos sus características según tu proyecto y te las detallamos en el presupuesto.</p>`,
   },
   {
     q: '¿Ustedes fabrican las canchas?',

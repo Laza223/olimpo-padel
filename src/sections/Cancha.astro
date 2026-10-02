@@ -1,11 +1,13 @@
 ---
 import BotonWa from '../components/BotonWa.astro';
 import Foto from '../components/Foto.astro';
+import OfertaFull from '../components/OfertaFull.astro';
 import { MSG } from '../lib/site';
 
 const modelos = [
   {
     nombre: 'Full Panorámica',
+    model: 'full_panoramica',
     sub: 'Sin postes en las esquinas · Para espacios techados',
     foto: 'cancha-full',
     anchos: [640, 1024],
@@ -25,6 +27,7 @@ const modelos = [
   },
   {
     nombre: 'Panorámica',
+    model: 'panoramica',
     sub: 'Con postes de acero en la estructura',
     foto: 'cancha-panoramica',
     anchos: [640, 1024],
@@ -51,7 +54,7 @@ const modelos = [
     <div class="modelos">
       {
         modelos.map((m) => (
-          <article class="modelo">
+          <article class="modelo" data-model={m.model}>
             <figure class="modelo__media">
               <span class="modelo__chip">Estándar 20 × 10&nbsp;m</span>
               <Foto nombre={m.foto} anchos={m.anchos} alto={m.alto} sizes="(min-width: 900px) 46vw, 100vw" alt={m.alt} />
@@ -72,7 +75,8 @@ const modelos = [
                   </li>
                 ))}
               </ul>
-              <BotonWa texto={m.texto} class="btn btn--wa btn--grande btn--ancho">Consultar precio</BotonWa>
+              {m.model === 'full_panoramica' && <OfertaFull />}
+              <BotonWa texto={m.texto} data-wa-model={m.model} class="btn btn--wa btn--grande btn--ancho">Pedí tu presupuesto</BotonWa>
             </div>
           </article>
         ))

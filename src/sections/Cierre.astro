@@ -3,13 +3,35 @@ import BotonWa from '../components/BotonWa.astro';
 import Foto from '../components/Foto.astro';
 import { MSG } from '../lib/site';
 ---
-<section class="seccion cierre" aria-labelledby="cierre-titulo">
+<section class="seccion cierre" id="contacto" aria-labelledby="cierre-titulo">
   <div class="cierre__fondo" aria-hidden="true">
     <Foto nombre="cancha-full" anchos={[640, 1024]} alto={768} sizes="100vw" alt="" />
   </div>
   <div class="contenedor">
     <h2 class="titulo titulo--centro" id="cierre-titulo">¿Listo para tener tu cancha?</h2>
     <p class="bajada bajada--centro">Contanos dónde va y cuántas necesitás. En 24 horas tenés tu presupuesto.</p>
+    <fieldset class="consulta" data-quote hidden>
+      <legend>Adelantanos tu proyecto <span>(opcional)</span></legend>
+      <div class="consulta__campos">
+        <label for="quote-location">Localidad y provincia
+          <input id="quote-location" data-quote-field="location" type="text" maxlength="80" placeholder="Ej.: Buenos Aires" autocomplete="address-level2" />
+        </label>
+        <label for="quote-quantity">¿Cuántas canchas?
+          <select id="quote-quantity" data-quote-field="quantity">
+            <option value="">Elegí una opción</option><option value="1">1 cancha</option><option value="2">2 canchas</option>
+            <option value="3+">3 o más canchas</option><option value="a definir">Todavía no sé</option>
+          </select>
+        </label>
+        <label for="quote-roof">¿Tenés el espacio techado?
+          <select id="quote-roof" data-quote-field="roof">
+            <option value="">Elegí una opción</option><option value="techo existente">Sí, ya tiene techo</option>
+            <option value="necesito techado">Necesito el techado</option><option value="a definir">Todavía no sé</option>
+          </select>
+        </label>
+      </div>
+      <p class="consulta__ayuda">Estos datos se agregan a tu mensaje de WhatsApp.</p>
+    </fieldset>
+    <noscript><p>Podés contarnos los datos de tu proyecto directamente por WhatsApp.</p></noscript>
     <div class="cierre__ctas">
       <BotonWa texto={MSG.cierre} class="btn btn--wa btn--grande">Pedí tu presupuesto por WhatsApp</BotonWa>
     </div>

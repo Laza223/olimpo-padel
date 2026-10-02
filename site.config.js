@@ -7,7 +7,12 @@
 //  correr `pnpm run build`.
 // ─────────────────────────────────────────────────────────────
 
+// Oferta autorizada por Lazar. Precio de la cancha, sin fecha límite definida.
+export const fullOffer = { price: 19900, previousPrice: 21900, currency: 'USD' };
+export const formatUSD = (price) => `USD ${Number(price).toLocaleString('es-AR')}`;
+
 export default {
+  fullOffer,
   // WhatsApp que recibe los pedidos. Solo dígitos, formato internacional
   // de Argentina: 549 + característica sin el 0 + número sin el 15.
   whatsapp: '5492323610592',
@@ -17,7 +22,10 @@ export default {
 
   // Dominio con https, sin barra final. Se usa para la URL canónica,
   // la imagen al compartir, robots.txt y sitemap.xml.
-  dominio: 'https://olimpo-padel.vercel.app',
+  dominio: 'https://www.olimpopadel.com',
+
+  // Google Analytics 4. Vacío desactiva la medición. Solo corre en el dominio publicado.
+  ga4: 'G-VV66RB0C0R',
 
   // Dónde fabricamos. Solo Buenos Aires por ahora, sin localidad. Se muestra en el pie.
   zona: 'Buenos Aires, Argentina',
